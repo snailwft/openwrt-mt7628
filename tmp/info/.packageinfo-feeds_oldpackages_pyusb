@@ -1,0 +1,22 @@
+Source-Makefile: package/feeds/oldpackages/pyusb/Makefile
+Package: pyusb
+Submenu: Python
+Version: 0.4.2-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-mini +libusb-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: python
+Section: lang
+Category: Languages
+Title: pyusb
+Maintainer: 
+Source: pyusb-0.4.2.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description:   usb port python bindings
+http://pyusb.sourceforge.net
+
+@@
+
+

@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/oldpackages/jtg/Makefile
+Package: jtg
+Version: 1.95-2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Jugi's Traffic Generator
+Maintainer: Roberto Riggio <roberto.riggio@create-net.org>
+Source: jtg-v1.95.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description: Jugi's Traffic Generator
+https://hoslab.cs.helsinki.fi/savane/projects/jtg/
+Roberto Riggio <roberto.riggio@create-net.org>
+@@
+
+

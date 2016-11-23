@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/oldpackages/cgilib/Makefile
+Package: cgilib
+Version: 0.7-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: libltdl
+Section: libs
+Category: Libraries
+Title: Simple CGI Library
+Maintainer: 
+Source: cgilib-0.7.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description: Simple CGI Library
+http://www.infodrom.org/projects/cgilib/
+
+@@
+
+

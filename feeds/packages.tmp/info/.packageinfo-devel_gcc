@@ -1,0 +1,19 @@
+Source-Makefile: feeds/packages/devel/gcc/Makefile
+Package: gcc
+Version: 4.8.3-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +binutils +libstdcpp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: libtool libintl libiconv
+Section: devel
+Category: Development
+Title: gcc
+Maintainer: Christian Beier <cb@shoutrlabs.com>
+Source: gcc-4.8.3.tar.bz2
+Type: ipkg
+Description: 	build a native toolchain for compiling on target
+Christian Beier <cb@shoutrlabs.com>
+@@
+
+

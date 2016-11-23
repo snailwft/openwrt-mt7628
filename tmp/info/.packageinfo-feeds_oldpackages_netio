@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/oldpackages/netio/Makefile
+Package: netio
+Version: 1.31-2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +USE_UCLIBCXX:uclibcxx +USE_LIBSTDCXX:libstdcpp +libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Network throughput benchmark
+Maintainer: 
+Source: netio131.zip
+Type: ipkg
+Feed: oldpackages
+Description: Network throughput benchmark
+http://www.ars.de/ars/ars.nsf/docs/netio
+
+@@
+
+

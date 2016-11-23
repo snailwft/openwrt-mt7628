@@ -1,0 +1,23 @@
+Source-Makefile: package/feeds/oldpackages/egenix-mx/Makefile
+Package: python-egenix-mx
+Submenu: Python
+Version: 2.0.6-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-mini
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: python
+Section: lang
+Category: Languages
+Title: Egenix mxBase
+Maintainer: 
+Source: egenix-mx-base-2.0.6.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description:  This package contains a set of base packages from Egenix required by other
+ python packages.
+http://www.egenix.com/products/python/mxBase/
+
+@@
+
+

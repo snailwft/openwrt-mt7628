@@ -1,0 +1,16 @@
+Package: openssh-sftp-server
+Version: 7.1p2-1
+Depends: libc
+Source: feeds/packages/net/openssh
+License: BSD ISC
+LicenseFiles: LICENCE
+Section: net
+Maintainer: Peter Wagner <tripolar@gmx.at>
+Architecture: ramips_24kec
+Installed-Size: 33455
+Filename: openssh-sftp-server_7.1p2-1_ramips_24kec.ipk
+Size: 34253
+MD5Sum: c7292b7f6c109d67b9ba0599878d7aac
+SHA256sum: 58eaaeb84745ad176ec414fb2cf99d59c6d848a7937ebfbb6b843183675b6dce
+Description:  OpenSSH SFTP server.
+

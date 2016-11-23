@@ -1,0 +1,18 @@
+Source-Makefile: feeds/oldpackages/utils/huaweiaktbbo/Makefile
+Package: huaweiaktbbo
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libusb-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Huawei E156/E169/E220 activation tool
+Maintainer: 
+Source: 
+Type: ipkg
+Description: Huawei E156/E169/E220 activation tool
+
+@@
+
+

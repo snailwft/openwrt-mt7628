@@ -1,0 +1,22 @@
+Source-Makefile: package/feeds/oldpackages/shat/Makefile
+Package: shat
+Version: 0.9.7-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Source Hardware Address Translation
+Maintainer: 
+Source: shat-0.9.7.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description: 	A tool which allows hosts with arbitrary IP configuration
+	to connect to the internet over a SHAT gateway.
+
+http://sourceforge.net/projects/shat/
+
+@@
+
+

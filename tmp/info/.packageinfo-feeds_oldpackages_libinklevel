@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/oldpackages/libinklevel/Makefile
+Package: libinklevel
+Version: 0.8.0-3
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: Printers Ink Level Library
+Maintainer: 
+Source: libinklevel-0.8.0.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description:   Libinklevel is a library for checking the ink level of your printer on a system which runs Linux.
+http://libinklevel.sourceforge.net/
+
+@@
+
+

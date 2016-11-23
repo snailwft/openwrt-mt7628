@@ -1,0 +1,22 @@
+Source-Makefile: package/feeds/oldpackages/deco/Makefile
+Package: deco
+Submenu: filemanager
+Version: 39-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libncurses
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Text-based, full featured file manager
+Maintainer: 
+Source: deco39.tgz
+Type: ipkg
+Feed: oldpackages
+Description: 	A clone of Norton Commander for Unix. Text-based, full featured
+	file manager.
+http://deco.sourceforge.net/
+
+@@
+
+

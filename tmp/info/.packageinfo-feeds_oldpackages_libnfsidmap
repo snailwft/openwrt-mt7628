@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/oldpackages/libnfsidmap/Makefile
+Package: libnfsidmap
+Submenu: Filesystem
+Version: 0.20-3
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: libnfsidmap, for compiling mount.nfs4
+Maintainer: 
+Source: libnfsidmap-0.20.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description:  needed for nfs-utils
+http://www.citi.umich.edu/projects/nfsv4
+
+@@
+
+

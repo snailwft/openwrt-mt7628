@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/oldpackages/sed/Makefile
+Package: sed
+Version: 4.2.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: GNU streams editor
+Maintainer: 
+Source: sed-4.2.1.tar.bz2
+Type: ipkg
+Feed: oldpackages
+Description: 	Sed (streams editor) takes text input and performs some operation
+	(or set of operations) on it and outputs the modified text.
+http://ftp.gnu.org/gnu/sed/
+
+@@
+
+

@@ -1,0 +1,46 @@
+Source-Makefile: feeds/packages/utils/rtl-sdr/Makefile
+Package: rtl-sdr
+Version: 2014-02-10
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +librt +libpthread +librtlsdr
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Software Defined Radio with Realtek RTL2832U
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: rtl-sdr-2014-02-10-6ee557360645da158e3065111349c318894b497b.tar.gz
+License: GPLv2
+LicenseFiles: COPYING
+Type: ipkg
+Description:     rtl-sdr allows DVB-T dongles based on the Realtek RTL2832U to be used as
+  an inexpensive SDR.
+
+  This package contains the utilities and daemons.
+http://sdr.osmocom.org/trac/wiki/rtl-sdr
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+Package: librtlsdr
+Version: 2014-02-10
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libusb-1.0
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: Software Defined Radio with Realtek RTL2832U shared library library
+Maintainer: Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+Source: rtl-sdr-2014-02-10-6ee557360645da158e3065111349c318894b497b.tar.gz
+License: GPLv2
+LicenseFiles: COPYING
+Type: ipkg
+Description:     rtl-sdr allows DVB-T dongles based on the Realtek RTL2832U to be used as
+  an inexpensive SDR.
+
+  This package contains the librtlsdr shared library.
+http://sdr.osmocom.org/trac/wiki/rtl-sdr
+Vasilis Tsiligiannis <b_tsiligiannis@silverton.gr>
+@@
+
+

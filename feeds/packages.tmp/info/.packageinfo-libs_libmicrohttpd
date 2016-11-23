@@ -1,0 +1,22 @@
+Source-Makefile: feeds/packages/libs/libmicrohttpd/Makefile
+Package: libmicrohttpd
+Version: 0.9.38-1.2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +libgcrypt +libgnutls +libgpg-error +libopenssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: GNU libmicrohttpd is a library that runs an HTTP server.
+Maintainer: Martijn Zilverschoon <martijn@friedzombie.com>
+Source: libmicrohttpd-0.9.38.tar.gz
+License: LGPL-2.1
+LicenseFiles: COPYING
+Type: ipkg
+Description: 	GNU libmicrohttpd is a small C library that is supposed to make it easy
+	to run an HTTP server as part of another application.
+http://www.gnu.org/software/libmicrohttpd/
+Martijn Zilverschoon <martijn@friedzombie.com>
+@@
+
+

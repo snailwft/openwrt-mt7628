@@ -1,0 +1,136 @@
+Source-Makefile: feeds/packages/net/knot/Makefile
+Package: knot-libknot
+Submenu: IP Addresses and Names
+Version: 1.6.5-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +liburcu
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Knot DNS (library)
+Maintainer: Daniel Salzman <daniel.salzman@nic.cz>
+Source: knot-1.6.5.tar.xz
+License: GPL-2.0+
+Type: ipkg
+Description: 	Knot DNS library.
+https://www.knot-dns.cz
+Daniel Salzman <daniel.salzman@nic.cz>
+@@
+
+Package: knot
+Submenu: IP Addresses and Names
+Version: 1.6.5-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +liburcu +knot-libknot
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Knot DNS (server)
+Maintainer: Daniel Salzman <daniel.salzman@nic.cz>
+Source: knot-1.6.5.tar.xz
+License: GPL-2.0+
+Type: ipkg
+Description: 	High-performance authoritative-only DNS server.
+https://www.knot-dns.cz
+Daniel Salzman <daniel.salzman@nic.cz>
+@@
+
+Package: knot-dig
+Submenu: IP Addresses and Names
+Version: 1.6.5-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +liburcu +knot-libknot
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Knot DNS lookup utility
+Maintainer: Daniel Salzman <daniel.salzman@nic.cz>
+Source: knot-1.6.5.tar.xz
+License: GPL-2.0+
+Type: ipkg
+Description: 	Knot DNS lookup utility.
+https://www.knot-dns.cz
+Daniel Salzman <daniel.salzman@nic.cz>
+@@
+
+Package: knot-host
+Submenu: IP Addresses and Names
+Version: 1.6.5-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +liburcu +knot-libknot
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Knot DNS simple DNS lookup utility
+Maintainer: Daniel Salzman <daniel.salzman@nic.cz>
+Source: knot-1.6.5.tar.xz
+License: GPL-2.0+
+Type: ipkg
+Description: 	Knot DNS simple DNS lookup utility.
+https://www.knot-dns.cz
+Daniel Salzman <daniel.salzman@nic.cz>
+@@
+
+Package: knot-nsec3hash
+Submenu: IP Addresses and Names
+Version: 1.6.5-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +liburcu +knot-libknot
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Knot DNS simple NSEC3 hash utility
+Maintainer: Daniel Salzman <daniel.salzman@nic.cz>
+Source: knot-1.6.5.tar.xz
+License: GPL-2.0+
+Type: ipkg
+Description: 	Knot DNS simple utility to compute NSEC3 hash.
+https://www.knot-dns.cz
+Daniel Salzman <daniel.salzman@nic.cz>
+@@
+
+Package: knot-nsupdate
+Submenu: IP Addresses and Names
+Version: 1.6.5-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +liburcu +knot-libknot
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Knot DNS dynamic DNS update utility
+Maintainer: Daniel Salzman <daniel.salzman@nic.cz>
+Source: knot-1.6.5.tar.xz
+License: GPL-2.0+
+Type: ipkg
+Description: 	Knot DNS dynamic DNS update utility.
+https://www.knot-dns.cz
+Daniel Salzman <daniel.salzman@nic.cz>
+@@
+
+Package: knot-tests
+Submenu: IP Addresses and Names
+Version: 1.6.5-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +liburcu +knot-libknot
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Knot DNS (tests)
+Maintainer: Daniel Salzman <daniel.salzman@nic.cz>
+Source: knot-1.6.5.tar.xz
+License: GPL-2.0+
+Type: ipkg
+Description: 	Unit tests for Knot DNS server.
+	Usage: /usr/share/knot/runtests.sh
+https://www.knot-dns.cz
+Daniel Salzman <daniel.salzman@nic.cz>
+@@
+
+

@@ -1,0 +1,22 @@
+Source-Makefile: feeds/packages/libs/libnetfilter-queue/Makefile
+Package: libnetfilter-queue
+Version: 1.0.2-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libmnl +libnfnetlink +kmod-nfnetlink-queue
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: API to packets queued by the kernel packet filter
+Maintainer: Nicolas Thill <nico@openwrt.org>
+Source: libnetfilter_queue-1.0.2.tar.bz2
+License: GPL-2.0+
+LicenseFiles: COPYING
+Type: ipkg
+Description:  libnetfilter_queue is a userspace library providing an API to packets
+ that have been queued by the kernel packet filter.
+http://www.netfilter.org/projects/libnetfilter_queue/
+Nicolas Thill <nico@openwrt.org>
+@@
+
+

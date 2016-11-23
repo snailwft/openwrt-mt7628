@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/oldpackages/scmpc/Makefile
+Package: scmpc
+Version: 0.2.2-4
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libcurl +libdaemon +argtable +confuse +libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: sound
+Category: Sound
+Title: A MPD client which submits your tracks to Last.Fm
+Maintainer: 
+Source: scmpc-0.2.2.tar.bz2
+Type: ipkg
+Feed: oldpackages
+Description:   scmpc is a multithreaded, robust client for MPD to submit tracks to Audioscrobbler (Last.fm).
+http://scmpc.berlios.de/
+
+@@
+
+

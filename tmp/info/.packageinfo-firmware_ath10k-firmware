@@ -1,0 +1,56 @@
+Source-Makefile: package/firmware/ath10k-firmware/Makefile
+Package: ath10k-firmware-qca988x
+Submenu: Wireless Drivers
+Version: 2014-11-13-77f72b5f7dd940386d9e619a17904987759b7186-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: ath10k firmware for QCA988x devices
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Source: ath10k-firmware-2014-11-13-77f72b5f7dd940386d9e619a17904987759b7186.tar.xz
+Type: ipkg
+Description: ath10k firmware for QCA988x devices
+https://github.com/kvalo/ath10k-firmware.git
+Felix Fietkau <nbd@openwrt.org>
+@@
+
+Package: ath10k-firmware-qca99x0
+Submenu: Wireless Drivers
+Version: 2014-11-13-77f72b5f7dd940386d9e619a17904987759b7186-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: ath10k firmware for QCA99x0 devices
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Source: ath10k-firmware-2014-11-13-77f72b5f7dd940386d9e619a17904987759b7186.tar.xz
+Type: ipkg
+Description: ath10k firmware for QCA99x0 devices
+https://github.com/kvalo/ath10k-firmware.git
+Felix Fietkau <nbd@openwrt.org>
+@@
+
+Package: ath10k-firmware-qca6174
+Submenu: Wireless Drivers
+Version: 2014-11-13-77f72b5f7dd940386d9e619a17904987759b7186-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: ath10k firmware for QCA6174 devices
+Maintainer: Felix Fietkau <nbd@openwrt.org>
+Source: ath10k-firmware-2014-11-13-77f72b5f7dd940386d9e619a17904987759b7186.tar.xz
+Type: ipkg
+Description: ath10k firmware for QCA6174 devices
+https://github.com/kvalo/ath10k-firmware.git
+Felix Fietkau <nbd@openwrt.org>
+@@
+
+

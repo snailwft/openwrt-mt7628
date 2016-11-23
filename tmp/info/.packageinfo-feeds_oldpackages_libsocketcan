@@ -1,0 +1,19 @@
+Source-Makefile: package/feeds/oldpackages/libsocketcan/Makefile
+Package: libsocketcan
+Version: 0.0.9-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: libsocketcan
+Maintainer: 
+Source: libsocketcan-0.0.9.tar.bz2
+Type: ipkg
+Feed: oldpackages
+Description: libsocketcan
+
+@@
+
+

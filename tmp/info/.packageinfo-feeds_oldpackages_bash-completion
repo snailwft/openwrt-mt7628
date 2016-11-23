@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/oldpackages/bash-completion/Makefile
+Package: bash-completion
+Version: 20080705-2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libncurses +bash
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: bash completion scripts
+Maintainer: 
+Source: bash-completion_20080705.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description:   bash completion extends bashs standard completion behavior
+  to achieve complex command lines with just a few keystrokes.
+http://www.caliban.org/bash/
+
+@@
+
+

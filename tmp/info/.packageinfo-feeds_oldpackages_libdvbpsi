@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/oldpackages/libdvbpsi/Makefile
+Package: libdvbpsi
+Version: 0.1.6-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: MPEG TS and DVB PSI tables decoding and generating
+Maintainer: 
+Source: libdvbpsi5-0.1.6.tar.bz2
+Type: ipkg
+Feed: oldpackages
+Description: 	libdvbpsi is a simple library designed for MPEG TS and DVB PSI tables
+	decoding and generating.
+http://www.videolan.org/developers/libdvbpsi.html
+
+@@
+
+

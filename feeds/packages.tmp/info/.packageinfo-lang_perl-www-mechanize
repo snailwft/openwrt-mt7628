@@ -1,0 +1,21 @@
+Source-Makefile: feeds/packages/lang/perl-www-mechanize/Makefile
+Package: perl-www-mechanize
+Submenu: Perl
+Version: 1.74-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread perl +perl-www
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Title: Perl WWW Mechanize
+Maintainer: Marcel Denia <naoir@gmx.net>
+Source: WWW-Mechanize-1.74.tar.gz
+License: GPL-1.0+ Artistic-1.0-Perl
+Type: ipkg
+Description: Perl WWW Mechanize
+http://search.cpan.org/dist/WWW-Mechanize/
+Marcel Denia <naoir@gmx.net>
+@@
+
+

@@ -1,0 +1,21 @@
+Source-Makefile: feeds/packages/net/aircrack-ng/Makefile
+Package: aircrack-ng
+Submenu: wireless
+Version: 1.2-rc1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpcap +libpthread +libopenssl +libnl +wireless-tools +ethtool
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: WLAN tools for breaking 802.11 WEP/WPA keys
+Maintainer: Rick Farina <zerochaos@gentoo.org>
+Source: aircrack-ng-1.2-rc1.tar.gz
+License: GPLv2
+Type: ipkg
+Description:   WLAN tools for breaking 802.11 WEP/WPA keys
+http://www.aircrack-ng.org/
+Rick Farina <zerochaos@gentoo.org>
+@@
+
+

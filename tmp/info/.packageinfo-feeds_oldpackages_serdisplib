@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/oldpackages/serdisplib/Makefile
+Package: serdisplib
+Version: 1.97.9-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libusb-compat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: A display control library
+Maintainer: 
+Source: serdisplib-1.97.9.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description: 	serdisplib is a library to drive serial and parallel displays
+	with built-in controllers.
+http://serdisplib.sourceforge.net/
+
+@@
+
+

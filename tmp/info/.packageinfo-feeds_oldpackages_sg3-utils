@@ -1,0 +1,22 @@
+Source-Makefile: package/feeds/oldpackages/sg3-utils/Makefile
+Package: sg3-utils
+Version: 1.24-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +kmod-usb-storage
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: sg3 scsi utilities
+Maintainer: 
+Source: sg3-utils_1.24.orig.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description:   The package includes a number of utilities to allow a user
+  to use the sg interface to find out low-level information
+  about any SCSI device.
+http://sg.danny.cz/sg/sg3_utils.html
+
+@@
+
+

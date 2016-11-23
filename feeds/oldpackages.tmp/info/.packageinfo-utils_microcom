@@ -1,0 +1,21 @@
+Source-Makefile: feeds/oldpackages/utils/microcom/Makefile
+Package: microcom
+Submenu: Terminal
+Version: 1.02-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: A serial terminal emulation program
+Maintainer: 
+Source: m102.tar.gz
+Type: ipkg
+Description: 	microcom is a minicom-like serial terminal emulator with scripting
+	support.
+http://microcomlinux.homestead.com/
+
+@@
+
+

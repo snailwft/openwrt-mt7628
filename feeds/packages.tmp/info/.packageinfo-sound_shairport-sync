@@ -1,0 +1,23 @@
+Source-Makefile: feeds/packages/sound/shairport-sync/Makefile
+Package: shairport-sync
+Version: 2.1.15-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +libopenssl +libavahi-client +alsa-lib +libdaemon +libsoxr +libpopt
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: sound
+Category: Sound
+Title: iPhone/iTunes compatible audio player
+Maintainer: Mike Brady <mikebrady@eircom.net>
+Source: shairport-sync-2.1.15.tar.gz
+License: MIT
+LicenseFiles: COPYING LICENSES shairport.c
+Type: ipkg
+Description:   Shairport Sync is server software that implements the Apple-originated RAOP protocol for
+  playback of audio from a compatible remote client such as the iPhone, iTunes, Apple TV, Quicktime Player or forked-daapd.
+  Shairport Sync implements audio synchronisation, supporting multi-room use.
+  Shairport Sync supports audio only.
+Mike Brady <mikebrady@eircom.net>
+@@
+
+

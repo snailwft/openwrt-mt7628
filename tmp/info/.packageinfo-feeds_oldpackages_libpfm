@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/oldpackages/libpfm/Makefile
+Package: libpfm
+Version: 3.6-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @BROKEN
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: Perfmon2 Kernel performance monitoring interface
+Maintainer: 
+Source: libpfm-3.6.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description: Perfmon2 Kernel performance monitoring interface
+http://perfmon2.sourceforge.net/
+
+@@
+
+

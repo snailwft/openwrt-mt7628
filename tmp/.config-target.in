@@ -1,0 +1,600 @@
+choice
+	prompt "Target System"
+	default TARGET_ar71xx
+	reset if !DEVEL
+	
+config TARGET_ar71xx
+	bool "Atheros AR7xxx/AR9xxx"
+	select HAS_SUBTARGETS
+
+
+config TARGET_ramips
+	bool "Ralink RT288x/RT3xxx"
+	select HAS_SUBTARGETS
+	help
+	  Build firmware images for Ralink RT288x/RT3xxx based boards.
+
+
+endchoice
+
+choice
+	prompt "Subtarget" if HAS_SUBTARGETS
+
+config TARGET_ar71xx_generic
+	bool "Generic"
+	select LINUX_3_18
+	depends on TARGET_ar71xx
+	select GPIO_SUPPORT
+	select HAS_MIPS16
+	select PCI_SUPPORT
+	select USES_SQUASHFS
+	select USB_SUPPORT
+	select mips
+	help
+	  Build firmware images for generic Atheros AR71xx/AR913x/AR934x based boards.
+
+
+config TARGET_ar71xx_nand
+	bool "Generic devices with NAND flash"
+	select LINUX_3_18
+	depends on TARGET_ar71xx
+	select GPIO_SUPPORT
+	select HAS_MIPS16
+	select NAND_SUPPORT
+	select PCI_SUPPORT
+	select RTC_SUPPORT
+	select USES_SQUASHFS
+	select USB_SUPPORT
+	select mips
+	help
+	  Build firmware images for Atheros AR71xx/AR913x based boards with
+	  NAND flash, e.g. Netgear WNDR4300.
+
+
+config TARGET_ar71xx_mikrotik
+	bool "Mikrotik devices with NAND flash"
+	select LINUX_3_18
+	depends on TARGET_ar71xx
+	select GPIO_SUPPORT
+	select HAS_MIPS16
+	select PCI_SUPPORT
+	select USES_TARGZ
+	select USB_SUPPORT
+	select mips
+	help
+	  Build firmware images for Atheros AR71xx/AR913x based Mikrotik boards.
+	  e.g. MikroTik RB-4xx or RB-750
+
+
+config TARGET_ramips_mt7620
+	bool "WRTnode 1 series"
+	select LINUX_3_18
+	depends on TARGET_ramips
+	select USES_DEVICETREE
+	select GPIO_SUPPORT
+	select PCI_SUPPORT
+	select USES_SQUASHFS
+	select USB_SUPPORT
+	select mipsel
+	help
+	  Build firmware images for Ralink RT288x/RT3xxx based boards.
+
+
+config TARGET_ramips_mt7628
+	bool "WRTnode 2 series"
+	select LINUX_3_18
+	depends on TARGET_ramips
+	select USES_DEVICETREE
+	select GPIO_SUPPORT
+	select PCI_SUPPORT
+	select USES_SQUASHFS
+	select USB_SUPPORT
+	select mipsel
+	help
+	  Build firmware images for Ralink RT288x/RT3xxx based boards.
+
+
+endchoice
+
+choice
+	prompt "Target Profile"
+
+config TARGET_ar71xx_generic_WRTNODE2Q
+	bool "WRTnode2Q board"
+	depends on TARGET_ar71xx_generic
+	
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_fstools
+	select DEFAULT_ip6tables
+	select DEFAULT_iptables
+	select DEFAULT_iwinfo
+	select DEFAULT_kmod-ath9k
+	select DEFAULT_kmod-gpio-button-hotplug
+	select DEFAULT_kmod-nf-nathelper
+	select DEFAULT_kmod-usb-core
+	select DEFAULT_kmod-usb-storage
+	select DEFAULT_kmod-usb2
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_logd
+	select DEFAULT_luci
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_rpcd-mod-iwinfo
+	select DEFAULT_swconfig
+	select DEFAULT_uboot-envtools
+	select DEFAULT_uci
+	select DEFAULT_wpad-mini
+	help
+	  Package set optimized for the WRTnode2Q board.
+
+config TARGET_ar71xx_nand_R6100
+	bool "NETGEAR R6100"
+	depends on TARGET_ar71xx_nand
+	
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_fstools
+	select DEFAULT_ip6tables
+	select DEFAULT_iptables
+	select DEFAULT_iwinfo
+	select DEFAULT_kmod-ath9k
+	select DEFAULT_kmod-gpio-button-hotplug
+	select DEFAULT_kmod-ledtrig-usbdev
+	select DEFAULT_kmod-nf-nathelper
+	select DEFAULT_kmod-usb-core
+	select DEFAULT_kmod-usb-ohci
+	select DEFAULT_kmod-usb2
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_logd
+	select DEFAULT_luci
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_rpcd-mod-iwinfo
+	select DEFAULT_swconfig
+	select DEFAULT_uboot-envtools
+	select DEFAULT_uci
+	select DEFAULT_wpad-mini
+	help
+	  Package set optimized for the NETGEAR R6100
+
+config TARGET_ar71xx_nand_WNDR4300
+	bool "NETGEAR WNDR3700v4/WNDR4300"
+	depends on TARGET_ar71xx_nand
+	
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_fstools
+	select DEFAULT_ip6tables
+	select DEFAULT_iptables
+	select DEFAULT_iwinfo
+	select DEFAULT_kmod-ath9k
+	select DEFAULT_kmod-gpio-button-hotplug
+	select DEFAULT_kmod-ledtrig-usbdev
+	select DEFAULT_kmod-nf-nathelper
+	select DEFAULT_kmod-usb-core
+	select DEFAULT_kmod-usb-ohci
+	select DEFAULT_kmod-usb2
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_logd
+	select DEFAULT_luci
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_rpcd-mod-iwinfo
+	select DEFAULT_swconfig
+	select DEFAULT_uboot-envtools
+	select DEFAULT_uci
+	select DEFAULT_wpad-mini
+	help
+	  Package set optimized for the NETGEAR WNDR3700v4/WNDR4300
+
+config TARGET_ar71xx_nand_NBG6716
+	bool "Zyxel NBG 6716"
+	depends on TARGET_ar71xx_nand
+	
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_fstools
+	select DEFAULT_ip6tables
+	select DEFAULT_iptables
+	select DEFAULT_iwinfo
+	select DEFAULT_kmod-ath10k
+	select DEFAULT_kmod-ath9k
+	select DEFAULT_kmod-gpio-button-hotplug
+	select DEFAULT_kmod-nf-nathelper
+	select DEFAULT_kmod-rtc-pcf8563
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_logd
+	select DEFAULT_luci
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_rpcd-mod-iwinfo
+	select DEFAULT_swconfig
+	select DEFAULT_uboot-envtools
+	select DEFAULT_uci
+	select DEFAULT_wpad-mini
+	help
+	  Package set optimized for the Zyxel NBG 6716 Routers.
+
+config TARGET_ar71xx_mikrotik_DefaultNoWifi
+	bool "Default Profile (no WiFi)"
+	depends on TARGET_ar71xx_mikrotik
+	
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_fstools
+	select DEFAULT_ip6tables
+	select DEFAULT_iptables
+	select DEFAULT_iwinfo
+	select DEFAULT_kmod-ath9k
+	select DEFAULT_kmod-gpio-button-hotplug
+	select DEFAULT_kmod-nf-nathelper
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_logd
+	select DEFAULT_luci
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_rpcd-mod-iwinfo
+	select DEFAULT_swconfig
+	select DEFAULT_uboot-envtools
+	select DEFAULT_uci
+	select DEFAULT_wpad-mini
+	help
+	  Default package set compatible with most boards.
+
+config TARGET_ar71xx_mikrotik_Ath5k
+	bool "Atheros WiFi (ath5k)"
+	depends on TARGET_ar71xx_mikrotik
+	
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_fstools
+	select DEFAULT_ip6tables
+	select DEFAULT_iptables
+	select DEFAULT_iwinfo
+	select DEFAULT_kmod-ath5k
+	select DEFAULT_kmod-gpio-button-hotplug
+	select DEFAULT_kmod-nf-nathelper
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_logd
+	select DEFAULT_luci
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_rpcd-mod-iwinfo
+	select DEFAULT_swconfig
+	select DEFAULT_uboot-envtools
+	select DEFAULT_uci
+	select DEFAULT_wpad-mini
+	help
+	  Package set compatible with hardware using Atheros WiFi cards.
+
+config TARGET_ramips_mt7620_Default
+	bool "Default Profile"
+	depends on TARGET_ramips_mt7620
+	
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_fstools
+	select DEFAULT_ip6tables
+	select DEFAULT_iptables
+	select DEFAULT_iwinfo
+	select DEFAULT_kmod-gpio-button-hotplug
+	select DEFAULT_kmod-leds-gpio
+	select DEFAULT_kmod-ledtrig-usbdev
+	select DEFAULT_kmod-nf-nathelper
+	select DEFAULT_kmod-usb-core
+	select DEFAULT_kmod-usb-ohci
+	select DEFAULT_kmod-usb2
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_logd
+	select DEFAULT_luci
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_ralink-wifi
+	select DEFAULT_swconfig
+	select DEFAULT_uci
+	select DEFAULT_wpad-mini
+	help
+	  Default package set compatible with most boards.
+
+config TARGET_ramips_mt7620_EX2700
+	bool "Netgear EX2700"
+	depends on TARGET_ramips_mt7620
+	
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_fstools
+	select DEFAULT_ip6tables
+	select DEFAULT_iptables
+	select DEFAULT_iwinfo
+	select DEFAULT_kmod-gpio-button-hotplug
+	select DEFAULT_kmod-leds-gpio
+	select DEFAULT_kmod-nf-nathelper
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_logd
+	select DEFAULT_luci
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_ralink-wifi
+	select DEFAULT_swconfig
+	select DEFAULT_uci
+	select DEFAULT_wpad-mini
+	help
+	  Support for Netgear EX2700
+
+config TARGET_ramips_mt7628_Default
+	bool "Default Profile"
+	depends on TARGET_ramips_mt7628
+	
+
+	select DEFAULT_base-files
+	select DEFAULT_busybox
+	select DEFAULT_dnsmasq
+	select DEFAULT_dropbear
+	select DEFAULT_firewall
+	select DEFAULT_fstools
+	select DEFAULT_ip6tables
+	select DEFAULT_iptables
+	select DEFAULT_iwinfo
+	select DEFAULT_kmod-gpio-button-hotplug
+	select DEFAULT_kmod-leds-gpio
+	select DEFAULT_kmod-ledtrig-usbdev
+	select DEFAULT_kmod-nf-nathelper
+	select DEFAULT_kmod-usb-core
+	select DEFAULT_kmod-usb-ohci
+	select DEFAULT_kmod-usb2
+	select DEFAULT_libc
+	select DEFAULT_libgcc
+	select DEFAULT_logd
+	select DEFAULT_luci
+	select DEFAULT_mtd
+	select DEFAULT_netifd
+	select DEFAULT_odhcp6c
+	select DEFAULT_odhcpd
+	select DEFAULT_opkg
+	select DEFAULT_ppp
+	select DEFAULT_ppp-mod-pppoe
+	select DEFAULT_ralink-wifi-mt76x8
+	select DEFAULT_swconfig
+	select DEFAULT_uci
+	select DEFAULT_wpad-mini
+	help
+	  Default package set compatible with most boards.
+
+endchoice
+
+config HAS_SUBTARGETS
+	bool
+
+config TARGET_BOARD
+	string
+
+		default "ar71xx" if TARGET_ar71xx
+		default "ramips" if TARGET_ramips
+config TARGET_ARCH_PACKAGES
+	string
+	
+		default "ar71xx" if TARGET_ar71xx_generic
+		default "ar71xx" if TARGET_ar71xx_nand
+		default "ar71xx" if TARGET_ar71xx_mikrotik
+		default "ramips_24kec" if TARGET_ramips_mt7620
+		default "ramips_24kec" if TARGET_ramips_mt7628
+
+config DEFAULT_TARGET_OPTIMIZATION
+	string
+	default "-Os -pipe -mno-branch-likely -mips32r2 -mtune=34kc" if TARGET_ar71xx_generic
+	default "-Os -pipe -mno-branch-likely -mips32r2 -mtune=34kc" if TARGET_ar71xx_nand
+	default "-Os -pipe -mno-branch-likely -mips32r2 -mtune=34kc" if TARGET_ar71xx_mikrotik
+	default "-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kec -mdsp" if TARGET_ramips_mt7620
+	default "-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kec -mdsp" if TARGET_ramips_mt7628
+	default "-Os -pipe -funit-at-a-time"
+
+config CPU_TYPE
+	string
+	default "34kc" if TARGET_ar71xx_generic
+	default "34kc" if TARGET_ar71xx_nand
+	default "34kc" if TARGET_ar71xx_mikrotik
+	default "24kec+dsp" if TARGET_ramips_mt7620
+	default "24kec+dsp" if TARGET_ramips_mt7628
+	default ""
+
+config LINUX_3_18
+	bool
+
+	config DEFAULT_base-files
+		bool
+
+	config DEFAULT_busybox
+		bool
+
+	config DEFAULT_dnsmasq
+		bool
+
+	config DEFAULT_dropbear
+		bool
+
+	config DEFAULT_firewall
+		bool
+
+	config DEFAULT_fstools
+		bool
+
+	config DEFAULT_ip6tables
+		bool
+
+	config DEFAULT_iptables
+		bool
+
+	config DEFAULT_iwinfo
+		bool
+
+	config DEFAULT_kmod-ath10k
+		bool
+
+	config DEFAULT_kmod-ath5k
+		bool
+
+	config DEFAULT_kmod-ath9k
+		bool
+
+	config DEFAULT_kmod-gpio-button-hotplug
+		bool
+
+	config DEFAULT_kmod-leds-gpio
+		bool
+
+	config DEFAULT_kmod-ledtrig-usbdev
+		bool
+
+	config DEFAULT_kmod-nf-nathelper
+		bool
+
+	config DEFAULT_kmod-rtc-pcf8563
+		bool
+
+	config DEFAULT_kmod-usb-core
+		bool
+
+	config DEFAULT_kmod-usb-ohci
+		bool
+
+	config DEFAULT_kmod-usb-storage
+		bool
+
+	config DEFAULT_kmod-usb2
+		bool
+
+	config DEFAULT_libc
+		bool
+
+	config DEFAULT_libgcc
+		bool
+
+	config DEFAULT_logd
+		bool
+
+	config DEFAULT_luci
+		bool
+
+	config DEFAULT_mtd
+		bool
+
+	config DEFAULT_netifd
+		bool
+
+	config DEFAULT_odhcp6c
+		bool
+
+	config DEFAULT_odhcpd
+		bool
+
+	config DEFAULT_opkg
+		bool
+
+	config DEFAULT_ppp
+		bool
+
+	config DEFAULT_ppp-mod-pppoe
+		bool
+
+	config DEFAULT_ralink-wifi
+		bool
+
+	config DEFAULT_ralink-wifi-mt76x8
+		bool
+
+	config DEFAULT_rpcd-mod-iwinfo
+		bool
+
+	config DEFAULT_swconfig
+		bool
+
+	config DEFAULT_uboot-envtools
+		bool
+
+	config DEFAULT_uci
+		bool
+
+	config DEFAULT_wpad-mini
+		bool
+

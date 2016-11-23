@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/oldpackages/pwcrypt/Makefile
+Package: pwcrypt
+Version: 1.2.2-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: A utility to create crypted passwords from plaintext
+Maintainer: 
+Source: pwcrypt-1.2.2.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description:  A wrapper for the unix crypt() function. Supports crypt and MD5 hashing
+http://xjack.org/pwcrypt
+
+@@
+
+

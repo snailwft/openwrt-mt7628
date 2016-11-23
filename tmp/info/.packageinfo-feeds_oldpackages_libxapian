@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/oldpackages/libxapian/Makefile
+Package: libxapian
+Version: 1.2.8-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libstdcpp +libuuid +zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: util-linux !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Section: libs
+Category: Libraries
+Title: xapian
+Maintainer: 
+Source: xapian-core-1.2.8.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description: xapian
+http://xapian.org
+
+@@
+
+

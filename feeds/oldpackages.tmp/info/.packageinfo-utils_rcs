@@ -1,0 +1,19 @@
+Source-Makefile: feeds/oldpackages/utils/rcs/Makefile
+Package: rcs
+Version: 5.7-2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: The GNU Revision Control System
+Maintainer: 
+Source: rcs-5.7.tar.gz
+Type: ipkg
+Description: The GNU Revision Control System
+http://www.gnu.org/software/rcs/
+
+@@
+
+

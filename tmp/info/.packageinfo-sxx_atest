@@ -1,0 +1,19 @@
+Source-Makefile: package/sxx/atest/Makefile
+Package: atest
+Version: 2013-12-04
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Section: sxx
+Category: Sxx
+Title: A Simple Audio Test Program
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   A Simple Audio Test Program
+
+@@
+
+

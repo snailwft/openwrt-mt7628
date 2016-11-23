@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/wrtnode/luci-webpanel-linino/Makefile
+Package: luci-webpanel-linino
+Submenu: 3. Applications
+Version: 1.0.0-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +luci +luci-lib-json +uhttpd-mod-lua
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: luci
+Category: LuCI
+Title: simplified wifi configuration panel
+Maintainer: 
+Source: luci-webpanel-linino-1.0.0.zip
+Type: ipkg
+Feed: wrtnode
+Description: 	simplified wifi configuration panel
+
+@@
+
+

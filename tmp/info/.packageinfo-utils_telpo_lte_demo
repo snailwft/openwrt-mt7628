@@ -1,0 +1,18 @@
+Source-Makefile: package/utils/telpo_lte_demo/Makefile
+Package: telpo_lte_demo
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: telpo_lte_demo -- prints a snarky message
+Maintainer: 
+Source: 
+Type: ipkg
+Description: 	It's my first package demo.
+
+@@
+
+

@@ -1,0 +1,21 @@
+Source-Makefile: feeds/packages/net/sstp-client/Makefile
+Package: sstp-client
+Version: 1.0.9-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libevent2 +libopenssl +ppp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: SSTP is Microsofts Remote Access Solution for PPP over SSL
+Maintainer: Federico Di Marco <fededim@gmail.com>
+Source: sstp-client-1.0.9.tar.gz
+License: GPLv2
+Type: ipkg
+Description:  It can be used instead of PPTP or L2TP, and is only available with Windows Vista/7 connecting to a Windows 2008 Server. The advantage of SSTP  compared to PPTP and L2TP is that it cannot be easily blocked by firewalls since the traffic is transmitted over HTTPS on port 443.
+ Windows Vista/7 uses SSTP whenever PPTP or L2TP cannot be established. For further information on SSTP check out wikipedia's article on Secure Socket Tunneling Protocol.
+http://sstp-client.sourceforge.net/
+Federico Di Marco <fededim@gmail.com>
+@@
+
+

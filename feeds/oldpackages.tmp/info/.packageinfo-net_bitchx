@@ -1,0 +1,21 @@
+Source-Makefile: feeds/oldpackages/net/bitchx/Makefile
+Package: bitchx
+Submenu: Instant Messaging
+Version: 1.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libncurses
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: libncurses
+Section: net
+Category: Network
+Title: popular IRC client
+Maintainer: 
+Source: ircii-pana-1.1-final.tar.gz
+Type: ipkg
+Description: popular IRC client
+http://www.bitchx.org
+
+@@
+
+

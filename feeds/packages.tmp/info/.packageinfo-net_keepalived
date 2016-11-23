@@ -1,0 +1,21 @@
+Source-Makefile: feeds/packages/net/keepalived/Makefile
+Package: keepalived
+Version: 1.2.16-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libnl +libopenssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Failover and monitoring daemon for LVS clusters
+Maintainer: Nicolas Thill <nico@openwrt.org>
+Source: keepalived-1.2.16.tar.gz
+License: GPL-2.0+
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Failover and monitoring daemon for Linux Virtual Server (LVS) clusters.
+http://www.keepalived.org/
+Nicolas Thill <nico@openwrt.org>
+@@
+
+

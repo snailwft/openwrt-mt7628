@@ -1,0 +1,41 @@
+Source-Makefile: feeds/packages/utils/bandwidthd/Makefile
+Package: bandwidthd
+Version: 2.0.1-5
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libgd +libpcap
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: no-pgsql
+Section: utils
+Category: Utilities
+Title: Bandwidthd (without postgresql)
+Maintainer: Jean-Michel Lacroix <lacroix@lepine-lacroix.info>
+Source: bandwidthd-2.0.1.tgz
+License: GPL-2.0
+Type: ipkg
+Description:   A bandwidthd tracking utility.
+http://bandwidthd.sourceforge.net/
+Jean-Michel Lacroix <lacroix@lepine-lacroix.info>
+@@
+
+Package: bandwidthd-pgsql
+Version: 2.0.1-5
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libgd +libpcap +libpq
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Variant: pgsql
+Section: utils
+Category: Utilities
+Title: Bandwidthd (with postgresql enabled)
+Maintainer: Jean-Michel Lacroix <lacroix@lepine-lacroix.info>
+Source: bandwidthd-2.0.1.tgz
+License: GPL-2.0
+Type: ipkg
+Description:   A bandwidthd tracking utility.
+With the ability to store in a postgresql database.
+http://bandwidthd.sourceforge.net/
+Jean-Michel Lacroix <lacroix@lepine-lacroix.info>
+@@
+
+

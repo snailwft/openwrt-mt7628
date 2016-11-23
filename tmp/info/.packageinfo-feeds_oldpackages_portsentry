@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/oldpackages/portsentry/Makefile
+Package: portsentry
+Submenu: Firewall
+Version: 1.2-2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Portscan protection utility
+Maintainer: 
+Source: portsentry-1.2.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description: Portscan protection utility
+http://sourceforge.net/projects/sentrytools
+
+@@
+
+

@@ -1,0 +1,19 @@
+Source-Makefile: feeds/oldpackages/utils/dialog/Makefile
+Package: dialog
+Version: 1.1-20120706-2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libncurses
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Dialog
+Maintainer: 
+Source: dialog-1.1-20120706.tgz
+Type: ipkg
+Description:  A script-interpreter which provides a set of curses widgets.
+http://invisible-island.net/dialog/
+
+@@
+
+

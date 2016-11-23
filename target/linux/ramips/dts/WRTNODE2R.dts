@@ -1,0 +1,168 @@
+/dts-v1/;
+
+/include/ "mt7628an.dtsi"
+
+/ {
+	compatible = "mediatek,wrtnode2r", "mediatek,mt7628an-soc";
+	model = "WRTnode2R";
+
+	chosen {
+		bootargs = "console=ttyS0,57600";
+	};
+
+	aliases {
+		spi0 = &spi0;
+	};
+
+	pinctrl {
+		state_default: pinctrl0 {
+			gpio {
+				ralink,group = "gpio", "wled_an";
+				ralink,function = "gpio";
+			};
+			
+			i2s {
+				ralink,group = "i2s";
+				ralink,function = "pcm";
+			};
+			/*
+			spi {
+                                ralink,group = "spi";
+                                ralink,function = "spi";
+                        };
+			*/
+			spi_cs1 {
+                                ralink,group = "spi cs1";
+                                ralink,function = "spi cs1";
+                        };
+			
+		};
+	};
+
+	palmbus@10000000 {
+		spi0: spi@b00 {
+			status = "okay";
+
+			m25p80@0 {
+				#address-cells = <1>;
+				#size-cells = <1>;
+				compatible = "w25q256";
+				reg = <0 0>;
+				linux,modalias = "m25p80", "w25q256";
+				spi-max-frequency = <10000000>;
+				m25p,chunked-io = <32>;
+
+				partition@0 {
+					label = "u-boot";
+					reg = <0x0 0x30000>;
+					read-only;
+				};
+
+				partition@30000 {
+					label = "u-boot-env";
+					reg = <0x30000 0x10000>;
+					read-only;
+				};
+
+				factory: partition@40000 {
+					label = "factory";
+					reg = <0x40000 0x10000>;
+					read-only;
+				};
+
+				partition@50000 {
+					label = "firmware";
+					reg = <0x50000 0x1fb0000>;
+				};
+			};
+
+
+			spidev@1 {
+				#address-cells = <1>;
+				#size-cells = <1>;
+				/* compatible = "spidev"; */
+				compatible = "rohm,dh2228fv";
+				reg = <1 0>;
+				spi-max-frequency = <40000000>;
+			};
+		};
+		i2c@900 {
+			status = "okay";
+		};
+
+		/*
+		uart1@d00 {
+			status = "okay";
+			
+		};
+		*/
+
+		pcm@2000 {
+            		status = "okay";
+        	};
+        	gdma@2800 {
+            		status = "okay";
+        	};
+		
+	};
+
+	ethernet@10100000 {
+		mtd-mac-address = <&factory 0x4>;
+		ralink,port-map = "llllw";
+	};
+
+	sdhci@10130000 {
+		status = "okay";
+	};
+
+	pcie@10140000 {
+		status = "okay";
+	};
+
+	gpio-leds {
+		compatible = "gpio-leds";
+		indicator {
+			label = "wrtnode:blue:indicator";
+			gpios = <&gpio1 12 1>;
+		};
+	}; 
+
+
+	gpio-keys-polled {
+		compatible = "gpio-keys-polled";
+		#address-cells = <1>;
+		#size-cells = <0>;
+		poll-interval = <20>;
+		reset {
+			label = "reset";
+			gpios = <&gpio1 6 1>;
+			linux,code = <0x198>;
+		};
+	};
+	codec: mt7628-pcm-codec {
+		
+                compatible = "ralink,mt7628-pcm-codec";
+
+        };
+	
+        sound: mt7628-pcm-machine {
+	 	
+                compatible = "ralink,mt7628-pcm-machine";
+		
+                model = "mt7628-pcm-machine";
+                cpu-dai = <&pcm>;
+                codec-dai = <&codec>;
+		/*
+
+		compatible = "mediatek,mt7620-audio-wm8960";
+		i2s-controller = <&i2s>;
+		audio-codec = <&wm8960>;
+		model = "mt7620-wm8960";
+		audio-routing = 
+			"Headphone Jack",       "HP_L",
+			"Headphone Jack",       "HP_R",
+			"LINPUT1",              "Line In";
+		*/
+        };
+};
+

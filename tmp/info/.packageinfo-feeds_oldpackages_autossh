@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/oldpackages/autossh/Makefile
+Package: autossh
+Submenu: SSH
+Version: 1.4b-6
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Autossh client
+Maintainer: 
+Source: autossh-1.4b.tgz
+Type: ipkg
+Feed: oldpackages
+Description: Autossh client
+http://www.harding.motd.ca/autossh/
+
+@@
+
+

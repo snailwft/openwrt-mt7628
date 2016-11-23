@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/packages/python-setuptools/Makefile
+Package: python-setuptools
+Submenu: Python
+Version: 7.0-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Title: Tool for installing Python packages.
+Maintainer: 
+Source: setuptools-7.0.tar.gz
+Type: ipkg
+Feed: packages
+Description:   Easily download, build, install, upgrade, and uninstall Python packages
+https://bitbucket.org/pypa/setuptools
+
+@@
+
+

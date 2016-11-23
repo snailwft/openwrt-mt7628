@@ -1,0 +1,19 @@
+Source-Makefile: package/feeds/oldpackages/pipacs/Makefile
+Package: pipacs
+Version: 2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: UNIX socket accounting/wiewer program
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: oldpackages
+Description: UNIX socket accounting/wiewer program
+
+@@
+
+

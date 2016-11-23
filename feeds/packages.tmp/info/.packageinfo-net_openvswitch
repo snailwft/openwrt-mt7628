@@ -1,0 +1,100 @@
+Source-Makefile: feeds/packages/net/openvswitch/Makefile
+Package: openvswitch
+Version: 2.3.90-58be9c9fd732b5bdd3d4c2e9b8cc2313f570094d
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpcap +libopenssl +librt +libatomic +kmod-openvswitch @(LINUX_3_8||LINUX_3_10||LINUX_3_13||LINUX_3_14||LINUX_3_18||LINUX_4_0)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Open vSwitch Userspace Package
+Maintainer: Alexandru Ardelean <ardeleanalex@gmail.com>
+Source: openvswitch-2.3.90-58be9c9fd732b5bdd3d4c2e9b8cc2313f570094d.tar.gz
+License: Apache-2.0
+LicenseFiles: COPYING
+Type: ipkg
+Description:   Provides the main userspace components required for Open vSwitch to function.
+http://openvswitch.org/
+Alexandru Ardelean <ardeleanalex@gmail.com>
+@@
+
+Package: openvswitch-python
+Version: 2.3.90-58be9c9fd732b5bdd3d4c2e9b8cc2313f570094d
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @PACKAGE_openvswitch +PACKAGE_openvswitch:openvswitch +python
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Open vSwitch Python Support
+Maintainer: Alexandru Ardelean <ardeleanalex@gmail.com>
+Source: openvswitch-2.3.90-58be9c9fd732b5bdd3d4c2e9b8cc2313f570094d.tar.gz
+License: Apache-2.0
+LicenseFiles: COPYING
+Type: ipkg
+Description:   Provides bindings and libraries for using Python to manipulate/work with Open vSwitch.
+http://openvswitch.org/
+Alexandru Ardelean <ardeleanalex@gmail.com>
+@@
+
+Package: openvswitch-ipsec
+Version: 2.3.90-58be9c9fd732b5bdd3d4c2e9b8cc2313f570094d
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @PACKAGE_openvswitch +PACKAGE_openvswitch:openvswitch-python
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Open vSwitch Userspace Package
+Maintainer: Alexandru Ardelean <ardeleanalex@gmail.com>
+Source: openvswitch-2.3.90-58be9c9fd732b5bdd3d4c2e9b8cc2313f570094d.tar.gz
+License: Apache-2.0
+LicenseFiles: COPYING
+Type: ipkg
+Description:   The ovs-monitor-ipsec script provides support for encrypting GRE tunnels with 
+  IPsec.
+http://openvswitch.org/
+Alexandru Ardelean <ardeleanalex@gmail.com>
+@@
+
+Package: openvswitch-benchmark
+Version: 2.3.90-58be9c9fd732b5bdd3d4c2e9b8cc2313f570094d
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread @PACKAGE_openvswitch +PACKAGE_openvswitch:openvswitch
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Open vSwitch Userspace Package
+Maintainer: Alexandru Ardelean <ardeleanalex@gmail.com>
+Source: openvswitch-2.3.90-58be9c9fd732b5bdd3d4c2e9b8cc2313f570094d.tar.gz
+License: Apache-2.0
+LicenseFiles: COPYING
+Type: ipkg
+Description:   Utility for running OpenVSwitch benchmarking
+http://openvswitch.org/
+Alexandru Ardelean <ardeleanalex@gmail.com>
+@@
+
+Package: kmod-openvswitch
+Submenu: Network Support
+Version: <LINUX_VERSION>+2.3.90-58be9c9fd732b5bdd3d4c2e9b8cc2313f570094d
+Depends: +kmod-stp +kmod-ipv6 +kmod-gre +kmod-lib-crc32c +kmod-vxlan @(LINUX_3_8||LINUX_3_10||LINUX_3_13||LINUX_3_14||LINUX_3_18||LINUX_4_0)
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Open vSwitch Kernel Package
+Maintainer: 
+Source: openvswitch-2.3.90-58be9c9fd732b5bdd3d4c2e9b8cc2313f570094d.tar.gz
+License: Apache-2.0
+LicenseFiles: COPYING
+Type: ipkg
+Kernel-Config: CONFIG_BRIDGE
+Description:   This package contains the Open vSwitch kernel moodule and bridge compat
+  module. Furthermore, it supports OpenFlow.
+
+@@
+
+

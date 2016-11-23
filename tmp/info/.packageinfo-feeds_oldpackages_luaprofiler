@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/oldpackages/luaprofiler/Makefile
+Package: luaprofiler
+Submenu: Lua
+Version: 2.0.2-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +lua
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Title: Lua Profiler
+Maintainer: 
+Source: luaprofiler-2.0.2.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description:  Profile any Lua application
+http://luaprofiler.luaforge.net
+
+@@
+
+

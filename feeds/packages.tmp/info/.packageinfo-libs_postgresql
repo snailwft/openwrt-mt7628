@@ -1,0 +1,60 @@
+Source-Makefile: feeds/packages/libs/postgresql/Makefile
+Package: libpq
+Submenu: database
+Version: 9.4.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +zlib +libreadline +libpthread +libncurses +shadow-utils +shadow-su
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: PostgreSQL client library
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Source: postgresql-9.4.4.tar.bz2
+License: PostgreSQL
+Type: ipkg
+Description: PostgreSQL client library.
+http://www.postgresql.org/
+Jo-Philipp Wich <jow@openwrt.org>
+@@
+
+Package: pgsql-cli
+Submenu: database
+Version: 9.4.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpq +USE_UCLIBC:librt
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Command Line Interface (CLI) to PostgreSQL databases
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Source: postgresql-9.4.4.tar.bz2
+License: PostgreSQL
+Type: ipkg
+Description: Command Line Interface (CLI) to PostgreSQL databases.
+http://www.postgresql.org/
+Jo-Philipp Wich <jow@openwrt.org>
+@@
+
+Package: pgsql-server
+Submenu: database
+Version: 9.4.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpq +USE_UCLIBC:librt
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: PostgreSQL databases Server
+Maintainer: Jo-Philipp Wich <jow@openwrt.org>
+Require-User: postgres=5432:postgres=5432
+Source: postgresql-9.4.4.tar.bz2
+License: PostgreSQL
+Type: ipkg
+Description: PostgreSQL databases Server.
+http://www.postgresql.org/
+Jo-Philipp Wich <jow@openwrt.org>
+@@
+
+

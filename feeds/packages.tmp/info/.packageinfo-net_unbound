@@ -1,0 +1,127 @@
+Source-Makefile: feeds/packages/net/unbound/Makefile
+Package: unbound
+Submenu: IP Addresses and Names
+Version: 1.5.3-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +libunbound
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: libexpat
+Section: net
+Category: Network
+Title: A validating, recursive & caching DNS resolver (daemon)
+Maintainer: Michael Hanselmann <public@hansmi.ch>
+Source: unbound-1.5.3.tar.gz
+License: BSD-3-Clause
+LicenseFiles: LICENSE
+Type: ipkg
+Description:   This package contains the Unbound daemon.
+http://www.unbound.net/
+Michael Hanselmann <public@hansmi.ch>
+@@
+
+Package: unbound-anchor
+Submenu: IP Addresses and Names
+Version: 1.5.3-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +unbound +libexpat
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: libexpat
+Section: net
+Category: Network
+Title: A validating, recursive & caching DNS resolver (anchor utility)
+Maintainer: Michael Hanselmann <public@hansmi.ch>
+Source: unbound-1.5.3.tar.gz
+License: BSD-3-Clause
+LicenseFiles: LICENSE
+Type: ipkg
+Description:   This package contains the Unbound anchor utility.
+http://www.unbound.net/
+Michael Hanselmann <public@hansmi.ch>
+@@
+
+Package: unbound-control
+Submenu: IP Addresses and Names
+Version: 1.5.3-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +unbound
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: libexpat
+Section: net
+Category: Network
+Title: A validating, recursive & caching DNS resolver (control utility)
+Maintainer: Michael Hanselmann <public@hansmi.ch>
+Source: unbound-1.5.3.tar.gz
+License: BSD-3-Clause
+LicenseFiles: LICENSE
+Type: ipkg
+Description:   This package contains the Unbound control utility.
+http://www.unbound.net/
+Michael Hanselmann <public@hansmi.ch>
+@@
+
+Package: unbound-control-setup
+Submenu: IP Addresses and Names
+Version: 1.5.3-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +unbound-control +openssl-util
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: libexpat
+Section: net
+Category: Network
+Title: A validating, recursive & caching DNS resolver (control setup utility)
+Maintainer: Michael Hanselmann <public@hansmi.ch>
+Source: unbound-1.5.3.tar.gz
+License: BSD-3-Clause
+LicenseFiles: LICENSE
+Type: ipkg
+Description:   This package contains the Unbound control setup utility.
+http://www.unbound.net/
+Michael Hanselmann <public@hansmi.ch>
+@@
+
+Package: unbound-host
+Submenu: IP Addresses and Names
+Version: 1.5.3-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +libunbound
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: libexpat
+Section: net
+Category: Network
+Title: A validating, recursive & caching DNS resolver (DNS lookup utility)
+Maintainer: Michael Hanselmann <public@hansmi.ch>
+Source: unbound-1.5.3.tar.gz
+License: BSD-3-Clause
+LicenseFiles: LICENSE
+Type: ipkg
+Description:   This package contains the Unbound DNS lookup utility.
+http://www.unbound.net/
+Michael Hanselmann <public@hansmi.ch>
+@@
+
+Package: libunbound
+Version: 1.5.3-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: libexpat
+Section: libs
+Category: Libraries
+Title: A validating, recursive & caching DNS resolver (library)
+Maintainer: Michael Hanselmann <public@hansmi.ch>
+Source: unbound-1.5.3.tar.gz
+License: BSD-3-Clause
+LicenseFiles: LICENSE
+Type: ipkg
+Description:   This package contains the Unbound shared library.
+http://www.unbound.net/
+Michael Hanselmann <public@hansmi.ch>
+@@
+
+

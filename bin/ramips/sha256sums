@@ -1,0 +1,7 @@
+SHA256(openwrt-ramips-mt7628-root.squashfs)= e6f20f33386919a831c66ccb9696f2e4b8de20c2135d2a8b56f73207f4ba062a
+SHA256(openwrt-ramips-mt7628-uImage.bin)= b922c585233f4bdf5be1e2706568597d22dd72548de35662957020ebbd5cde33
+SHA256(openwrt-ramips-mt7628-vmlinux.bin)= 90a80768f346e236d20d8c29b8217330e1fc48acb3f9cf6c7da162c413a88384
+SHA256(openwrt-ramips-mt7628-vmlinux.elf)= ee7a6139d166c188cc7a0fa7c17eeff986dce22cf3634bcd58dd8bbede2e9725
+SHA256(openwrt-ramips-mt7628-wrtnode2p-squashfs-sysupgrade.bin)= 4036971136c5c6b7a28b3a2b4323f1b0df5d8d4bbda4cec962384bd071ada763
+SHA256(openwrt-ramips-mt7628-wrtnode2r-squashfs-sysupgrade.bin)= d24d7b4db69afcac88450e3fd50cea57f59078bcc9cd7edfeef4895a3dcf7345
+SHA256(sha256sums)= e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855

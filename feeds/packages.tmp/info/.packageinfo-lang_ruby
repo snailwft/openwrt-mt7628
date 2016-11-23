@@ -1,0 +1,1409 @@
+Source-Makefile: feeds/packages/lang/ruby/Makefile
+Package: ruby
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libruby
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language (interpreter)
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Ruby is the interpreted scripting language for quick and easy
+ object-oriented programming.  It has many features to process text files
+ and to do system management tasks (as in perl).  It is simple,
+ straight-forward, and extensible.
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: libruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread +librt +libgmp
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: libs
+Category: Libraries
+Title: Ruby scripting language (shared library)
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description: Ruby scripting language (shared library)
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-stdlib
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-misc +ruby-bigdecimal +ruby-cgi +ruby-csv +ruby-datetime +ruby-dbm +ruby-debuglib +ruby-digest +ruby-drb +ruby-enc +ruby-enc-extra +ruby-erb +ruby-gdbm +ruby-gems +ruby-json +ruby-io-console +ruby-irb +ruby-fiddle +ruby-filelib +ruby-logger +ruby-math +ruby-minitest +ruby-mkmf +ruby-multithread +ruby-nkf +ruby-net +ruby-openssl +ruby-optparse +ruby-patterns +ruby-powerassert +ruby-prettyprint +ruby-pstore +ruby-psych +ruby-racc +ruby-rake +ruby-rbconfig +ruby-rdoc +ruby-readline +ruby-rexml +ruby-rinda +ruby-ripper +ruby-rss +ruby-sdbm +ruby-shell +ruby-socket +ruby-testunit +ruby-unicodenormalize +ruby-uri +ruby-webrick +ruby-xmlrpc +ruby-yaml +ruby-zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby standard libraries (metadata for all stdlib subsets)
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  This metapackage currently install all ruby-* packages,
+ providing a complete Ruby Standard Library.
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-bigdecimal
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Arbitrary-precision decimal floating-point lib for Ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides bigdecimal* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-cgi
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-filelib +ruby-pstore
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby CGI support toolkit
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description: Ruby CGI support toolkit
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-csv
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-patterns +ruby-datetime +ruby-enc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language CSV library
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides csv.rb file
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-datetime
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language date library
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides date.rb and time.rb
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-dbm
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +libdb47
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby support for dbm
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  The DBM class provides a wrapper to a Unix-style dbm or Database Manager library.
+ This package provides dbm.so file.
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-debuglib
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-multithread +ruby-prettyprint
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language debug library
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides files for debugging:
+ - benchmark.rb
+ - debug.rb
+ - objspace.so
+ - profile.rb
+ - profiler.rb
+ - tracer.rb
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-digest
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +RUBY_DIGEST_USE_OPENSSL:libopenssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby Digest Library
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides digest* files. Can be configured to use OpenSSL or
+ bundled hash functions.
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+Config:
+
+	config RUBY_DIGEST_USE_OPENSSL
+		bool "Use OpenSSL functions for ruby digest hash functions"
+        depends on PACKAGE_ruby-digest
+		help
+			Ruby can use OpenSSL hash functions or compile alternative implementations. Using
+			OpenSSL saves about 30KBytes (less when compressed) but requires OpenSSL (that
+			is way bigger than that). However, if OpenSSL is already needed by another usage,
+			as ruby-openssl or any other non ruby package, it is better to mark this option.
+		default n
+
+@@
+
+Package: ruby-drb
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-filelib +ruby-patterns +ruby-socket
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby distributed object system
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides drb* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-enc
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby character re-coding library charset (small subset)
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides ruby encoding library for encodings used directly by
+ libraries in Ruby Standard Library:
+ - enc/encdb.so
+ - enc/euc_jp.so
+ - enc/iso_8859_1.so
+ - enc/utf_16be.so
+ - enc/utf_16le.so
+ - enc/utf_32be.so
+ - enc/utf_32le.so
+ FYI: ASCII-8BIT, UTF-7, UTF-8 and US-ASCII are already in Core.
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-enc-extra
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby character re-coding library charset (extra subset)
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides extra encodings not provided by ruby-enc:
+ - enc/big5.so
+ - enc/cp949.so
+ - enc/emacs_mule.so
+ - enc/euc_kr.so
+ - enc/euc_tw.so
+ - enc/gb18030.so
+ - enc/gb2312.so
+ - enc/gbk.so
+ - enc/iso_8859_10.so
+ - enc/iso_8859_11.so
+ - enc/iso_8859_13.so
+ - enc/iso_8859_14.so
+ - enc/iso_8859_15.so
+ - enc/iso_8859_16.so
+ - enc/iso_8859_2.so
+ - enc/iso_8859_3.so
+ - enc/iso_8859_4.so
+ - enc/iso_8859_5.so
+ - enc/iso_8859_6.so
+ - enc/iso_8859_7.so
+ - enc/iso_8859_8.so
+ - enc/iso_8859_9.so
+ - enc/koi8_r.so
+ - enc/koi8_u.so
+ - enc/shift_jis.so
+ - enc/trans/big5.so
+ - enc/trans/chinese.so
+ - enc/trans/emoji.so
+ - enc/trans/emoji_iso2022_kddi.so
+ - enc/trans/emoji_sjis_docomo.so
+ - enc/trans/emoji_sjis_kddi.so
+ - enc/trans/emoji_sjis_softbank.so
+ - enc/trans/escape.so
+ - enc/trans/gb18030.so
+ - enc/trans/gbk.so
+ - enc/trans/iso2022.so
+ - enc/trans/japanese.so
+ - enc/trans/japanese_euc.so
+ - enc/trans/japanese_sjis.so
+ - enc/trans/korean.so
+ - enc/trans/single_byte.so
+ - enc/trans/transdb.so
+ - enc/trans/utf8_mac.so
+ - enc/trans/utf_16_32.so
+ - enc/windows_1251.so
+ - enc/windows_31j.so
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-erb
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-cgi
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language (embedded interpreter)
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides erb* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-fiddle
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +libffi
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: A libffi wrapper for Ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides fiddle* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-filelib
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc +ruby-misc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language File utils library
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides filesystem interaction files, including
+ path and temp:
+ - fileutils.rb
+ - find.rb
+ - pathname.rb
+ - pathname.so
+ - tempfile.rb
+ - tmpdir.rb
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-gdbm
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +libgdbm
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby support for gdbm
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides gdbm* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-gems
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-net +ruby-rdoc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby gems packet management
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides rubygems for gems usage, download and installation
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-io-console
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language Console interface
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides io-console* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-irb
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-debuglib +ruby-filelib +ruby-math
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language (interactive shell)
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides irb* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-json
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-datetime +ruby-misc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby support for JSON
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides json* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-logger
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-multithread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language logger and syslog library
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides log library, including syslog:
+ - logger.rb
+ - syslog.so
+ - syslog/logger.rb
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-math
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-patterns
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language math library
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides math related files:
+ - cmath.rb
+ - complex.rb
+ - mathn.rb
+ - mathn/complex.so
+ - mathn/rational.so
+ - matrix.rb
+ - matrix/eigenvalue_decomposition.rb
+ - matrix/lup_decomposition.rb
+ - prime.rb
+ - rational.rb
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-minitest
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-gems
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Gem minitest shipped with Ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides minitest gem
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-misc
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby standard libraries subset (miscelaneous files)
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  This package contains miscellaneous files from stdlib
+ not splitted in other ruby packages like stringio:
+ - English.rb
+ - abbrev.rb
+ - base64.rb
+ - continuation.so
+ - coverage.so
+ - delegate.rb
+ - e2mmap.rb
+ - etc.so
+ - expect.rb
+ - fcntl.so
+ - fiber.so
+ - getoptlong.rb
+ - open3.rb
+ - ostruct.rb
+ - pty.so
+ - scanf.rb
+ - securerandom.rb
+ - set.rb
+ - shellwords.rb
+ - stringio.so
+ - strscan.so
+ - tsort.rb
+ - weakref.rb
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-mkmf
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-filelib +ruby-optparse +ruby-rbconfig
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language makefile library
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides mkmf* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-multithread
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-misc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language multithread library
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides files for multithread usage:
+ - io/nonblock.so
+ - io/wait.so
+ - thread.so (FYI, Thread is a core class)
+ - monitor.rb
+ - mutex_m.rb
+ - sync.rb
+ - thwait.rb
+ - timeout.rb
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-net
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-datetime +ruby-digest +ruby-filelib +ruby-uri
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby Network Protocols Library
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides net* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-nkf
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby Network Kanji Filter
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides nkf* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-openssl
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc +libopenssl +ruby-misc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby support for openssl
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides openssl* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-optparse
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-misc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby command-line option analysis
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides optparse* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-patterns
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-multithread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby design patterns implementation
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides design patterns helpers files:
+ - forwardable.rb
+ - observer.rb
+ - singleton.rb
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-powerassert
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-ripper
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Gem power_assert shipped with Ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:   Power Assert gem for Ruby. Power Assert shows each value of variables
+  and method calls in the expression. It is useful for testing, providing
+  which value wasn't correct when the condition is not satisfied
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-prettyprint
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-misc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby PrettyPrint librart
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides Pretty Print library:
+ - pp.rb
+ - prettyprint.rb
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-pstore
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-digest +ruby-enc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language file based persistence
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides pstore.rb file
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-psych
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-bigdecimal +ruby-datetime +ruby-misc +ruby-enc +libyaml
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language YAML parser and emitter
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides psych* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-racc
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: LALR parser generator in Ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides racc* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-rake
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-datetime +ruby-filelib +ruby-optparse +ruby-patterns +ruby-rbconfig
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language Ruby Rake (make replacement)
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides rake* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-rbconfig
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language Ruby RbConfig
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides rbconfig file
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-rdoc
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-erb +ruby-irb +ruby-json +ruby-racc +ruby-rake +ruby-yaml +ruby-zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language (documentation generator)
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides rdoc* and ri files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-readline
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +libncurses +libreadline
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby support for readline
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides readline* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-rexml
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-patterns +ruby-enc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby XML toolkit
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides rexml* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-rinda
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-drb
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby Linda paradigm implementation
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides rinda* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-ripper
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby script parser
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides ripper* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-rss
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-net +ruby-nkf +ruby-rexml
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby RSS toolkit
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides rss* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-sdbm
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby simple file-based key-value dbm implementation
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides sdbm* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-shell
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-patterns
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby idiomatic Ruby interface
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides shell* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-socket
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-multithread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby scripting language socket support
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides socket-related files:
+ - gserver.rb
+ - ipaddr.rb
+ - resolv-replace.rb
+ - resolv.rb
+ - socket.rb
+ - socket.so
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-testunit
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-csv +ruby-erb +ruby-optparse +ruby-powerassert +ruby-prettyprint +ruby-rexml +ruby-yaml
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Gem test-unit shipped with Ruby
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides test/unit* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-unicodenormalize
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-enc +ruby-enc-extra
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby String additions for Unicode normalization
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:   Additions to class String for Unicode normalization
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-uri
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-socket +ruby-enc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby library to handle URI
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides uri* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-webrick
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-erb +ruby-net +ruby-patterns +ruby-rbconfig
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby Web server toolkit
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides webrick* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-xmlrpc
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-rexml +ruby-webrick
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby XML-RPC toolkit
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides xmlrpc* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-yaml
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +ruby-dbm +ruby-pstore +ruby-psych
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby YAML toolkit
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides yaml* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+Package: ruby-zlib
+Submenu: Ruby
+Version: 2.2.4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread ruby +zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: ruby/host !BUILD_NLS:libiconv !BUILD_NLS:libintl
+Build-Types: host
+Section: lang
+Category: Languages
+Title: Ruby support for zlib
+Maintainer: Luiz Angelo Daros de Luca <luizluca@gmail.com>
+Source: ruby-2.2.4.tar.bz2
+License: BSD-2-Clause
+LicenseFiles: COPYING
+Type: ipkg
+Description:  Provides zlib* files
+
+http://www.ruby-lang.org/
+Luiz Angelo Daros de Luca <luizluca@gmail.com>
+@@
+
+

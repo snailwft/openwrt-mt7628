@@ -1,0 +1,18 @@
+Source-Makefile: package/sxx/mt7628-pcm/Makefile
+Package: kmod-mt7628-pcm
+Version: <LINUX_VERSION>+2013-12-04-
+Depends: +kmod-sound-core +kmod-sound-soc-core 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: sxx 
+Category: Sxx
+Title: PCM on mt7628
+Maintainer: 
+Source: 
+Type: ipkg
+Description:   I2S on mt7628
+
+@@
+
+

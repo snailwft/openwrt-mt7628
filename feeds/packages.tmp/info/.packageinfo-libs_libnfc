@@ -1,0 +1,52 @@
+Source-Makefile: feeds/packages/libs/libnfc/Makefile
+Package: libnfc
+Version: 1.7.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libusb-compat +pcscd +ccid
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: A open source library for Near Field Communication (NFC)
+Maintainer: Sebastian Wendel <packages@sourceindex.de>
+Source: libnfc-1.7.1.tar.gz
+License: LGPL-2.1
+Type: ipkg
+Description: 	libnfc is the first libre, platform-independent, low level NFC SDK and Programmers API
+
+	* manipulate Jewel Topaz tags using libnfc
+	* manipulate MIFARE Classic and Ultralight tags using libnfc
+
+http://nfc-tools.org/
+Sebastian Wendel <packages@sourceindex.de>
+@@
+
+Package: nfc-utils
+Version: 1.7.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libnfc
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: A open source library for Near Field Communication (NFC)
+Maintainer: Sebastian Wendel <packages@sourceindex.de>
+Source: libnfc-1.7.1.tar.gz
+License: LGPL-2.1
+Type: ipkg
+Description: 	Provide some examples shared functions like print, parity calculation, options parsing
+
+	* Emulates a NFC Forum Tag Type 4 v2.0 (or v1.0)
+	* Jewel dump/restore tool
+	* Lists the first target present of each founded device
+	* MIFARE Classic manipulation example
+	* MIFARE Ultralight dump/restore tool
+	* Extract NDEF Message from a NFC Forum Tag Type 3
+	* Relay example using two PN532 devices
+	* Lists each available NFC device
+
+http://nfc-tools.org/
+Sebastian Wendel <packages@sourceindex.de>
+@@
+
+

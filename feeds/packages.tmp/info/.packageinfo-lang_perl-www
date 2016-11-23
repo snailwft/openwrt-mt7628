@@ -1,0 +1,21 @@
+Source-Makefile: feeds/packages/lang/perl-www/Makefile
+Package: perl-www
+Submenu: Perl
+Version: 5.837-2
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread perl +perl-html-parser +perl-html-tagset +perl-uri
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Title: WWW client/server library for Perl (aka LWP)
+Maintainer: Marcel Denia <naoir@gmx.net>
+Source: libwww-perl-5.837.tar.gz
+License: GPL-1.0+ Artistic-1.0-Perl
+Type: ipkg
+Description: WWW client/server library for Perl (aka LWP)
+http://search.cpan.org/dist/libwww-perl/
+Marcel Denia <naoir@gmx.net>
+@@
+
+

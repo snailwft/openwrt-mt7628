@@ -1,0 +1,36 @@
+Source-Makefile: package/system/ubox/Makefile
+Package: ubox
+Version: 2015-11-22-c086167a0154745c677f8730a336ea9cf7d71031
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +ubusd +ubus +libubus +libuci
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Title: OpenWrt system helper toolbox
+Maintainer: John Crispin <blogic@openwrt.org>
+Source: ubox-2015-11-22-c086167a0154745c677f8730a336ea9cf7d71031.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: OpenWrt system helper toolbox
+John Crispin <blogic@openwrt.org>
+@@
+
+Package: logd
+Version: 2015-11-22-c086167a0154745c677f8730a336ea9cf7d71031
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libubus +libblobmsg-json
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: base
+Category: Base system
+Title: OpenWrt system log implementation
+Maintainer: John Crispin <blogic@openwrt.org>
+Source: ubox-2015-11-22-c086167a0154745c677f8730a336ea9cf7d71031.tar.gz
+License: GPL-2.0
+Type: ipkg
+Description: OpenWrt system log implementation
+John Crispin <blogic@openwrt.org>
+@@
+
+

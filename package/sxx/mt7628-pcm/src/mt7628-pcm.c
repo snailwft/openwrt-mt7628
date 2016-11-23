@@ -97,9 +97,6 @@ struct mt7628_pcm {
 static inline uint32_t mt7628_pcm_read(const struct mt7628_pcm *pcm,
 	unsigned int reg)
 {
-#ifdef PCM_DEBUG
-	printk("pcm->base=0x%x\n",pcm->base);
-#endif
 	return readl(pcm->base + reg);
 }
 
@@ -112,17 +109,11 @@ static inline void mt7628_pcm_write(const struct mt7628_pcm *pcm,
 static int mt7628_pcm_startup(struct snd_pcm_substream *substream,
 	struct snd_soc_dai *dai)
 {
-#ifdef PCM_DEBUG
-	printk("hello mt7628_pcm_startup............\n");
-#endif
 	struct mt7628_pcm *pcm = snd_soc_dai_get_drvdata(dai);
 	uint32_t cfg;
 
 	if (dai->active)
 	{
-#ifdef PCM_DEBUG
-		printk("mt7628_pcm_startup....dai->active!=0\n");
-#endif
 		return 0;
 	}
 	else
@@ -166,7 +157,6 @@ static int mt7628_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
 {
 	struct mt7628_pcm *pcm = snd_soc_dai_get_drvdata(dai);
 #ifdef PCM_DEBUG	
-	printk("hello mt7628_pcm_trigger............\n");
 #endif
 	uint32_t cfg;
 	uint32_t mask;
@@ -199,7 +189,6 @@ static int mt7628_pcm_trigger(struct snd_pcm_substream *substream, int cmd,
 	{
 		cfg |= PCM_GLB_CFG_DMA_EN;// enable dma
 #ifdef PCM_DEBUG
-		printk("........enable dma\n");
 #endif
 	}
 	else
@@ -221,12 +210,10 @@ static int mt7628_pcm_set_fmt(struct snd_soc_dai *dai, unsigned int fmt)
 	case SND_SOC_DAIFMT_CBS_CFS:
 		cfg &= ~PCM_PCM_CFG_CLKOUT_EN; // pcm clock from external
        cfg |= PCM_PCM_CFG_EXT_FSYNC; // pcm sync from external
-        printk("hello mt7628_pcm_set_fmt SND_SOC_DAIFMT_CBS_CFS\n");
 		break;
 	case SND_SOC_DAIFMT_CBM_CFM:
 		cfg |= PCM_PCM_CFG_CLKOUT_EN; // pcm clock from internal
         cfg &= ~PCM_PCM_CFG_EXT_FSYNC; // pcm sync from internal
-        printk("hello mt7628_pcm_set_fmt SND_SOC_DAIFMT_CBM_CFM\n"); 
 		break;
 	case SND_SOC_DAIFMT_CBM_CFS:
 	default:
@@ -258,7 +245,6 @@ static int mt7628_pcm_set_sysclk(struct snd_soc_dai *dai, int clk_id,
 {
     struct mt7628_pcm *pcm = snd_soc_dai_get_drvdata(dai);
 
-	printk("hello mt7628_pcm_set_sysclk.........\n");
 
     //When using the external clock, the frequency clock
     //should be equal to the PCM_clock out. Otherwise, the
@@ -272,7 +258,6 @@ static int mt7628_pcm_suspend(struct snd_soc_dai *dai)
 {
 	struct mt7628_pcm *pcm = snd_soc_dai_get_drvdata(dai);
 	uint32_t cfg;
-	printk("hello mt7628_pcm_suspend.........\n");
 	if (dai->active) {
 		cfg = mt7628_pcm_read(pcm, PCM_GLB_CFG);
 		cfg &= ~PCM_GLB_CFG_CH0_RX_EN;
@@ -287,7 +272,6 @@ static int mt7628_pcm_resume(struct snd_soc_dai *dai)
 	struct mt7628_pcm *pcm = snd_soc_dai_get_drvdata(dai);
 	uint32_t cfg;
 
-	printk("hello mt7628_pcm_resume.........\n");
 	if (dai->active) {
 		cfg = mt7628_pcm_read(pcm, PCM_GLB_CFG);
 		cfg |= PCM_GLB_CFG_CH0_RX_EN;
@@ -328,7 +312,6 @@ static int mt7628_pcm_dai_probe(struct snd_soc_dai *dai)
 
 	///////////// pcm general config
 	cfg = mt7628_pcm_read(pcm, PCM_PCM_CFG);
-	printk("mt7628_pcm_dai_probe  pcm_read PCM_PCM_CFG   cfg=0x%x\n",cfg);
 	cfg &= ~PCM_PCM_CFG_LONG_FSYNC; //short sync mode
 	//cfg |= PCM_PCM_CFG_LONG_FSYNC; //long sync mode
 	cfg |= PCM_PCM_CFG_FSYNC_POL; // sync high active
@@ -336,7 +319,6 @@ static int mt7628_pcm_dai_probe(struct snd_soc_dai *dai)
 	//slot mode, pcm clock = 2.048M
 	cfg &= ~(0x7);
 	cfg |= 0x3; // 32 slots
-	printk("mt7628_pcm_dai_probe   PCM_PCM_CFG   cfg=0x%x\n",cfg);
 	mt7628_pcm_write(pcm, PCM_PCM_CFG, cfg);
 
 	////////////channel0 config///////////
@@ -344,7 +326,6 @@ static int mt7628_pcm_dai_probe(struct snd_soc_dai *dai)
 
 	cfg &=~(0x3ff);// raw data(16-bit),timeslot start 0
 
-	printk("mt7628_pcm_dai_probe   PCM_CH0_CFG   cfg=0x%x\n",cfg);
 	mt7628_pcm_write(pcm,PCM_CH0_CFG,cfg);
 
 	///////////// pcm fsync config/////////
@@ -357,7 +338,6 @@ static int mt7628_pcm_dai_probe(struct snd_soc_dai *dai)
 	cfg |= PCM_POS_DRV_FSYNC; // positive driver fsync
 	cfg |= 0x1;// 1 interve
 
-	printk("mt7628_pcm_dai_probe   PCM_FSYNC_CFG   cfg=0x%x\n",cfg);
 	mt7628_pcm_write(pcm, PCM_FSYNC_CFG, cfg);
 
 	//When using the external clock, the frequency clock
@@ -435,7 +415,7 @@ static int mt7628_pcm_dev_probe(struct platform_device *pdev)
 	struct mt7628_pcm *pcm;
 	int ret;
 
-	dev_err(&pdev->dev, ".............helloworld.................\n");
+	dev_err(&pdev->dev, "add by telpo team\n");
 	snd_dmaengine_pcm_register(&pdev->dev,
 		&mt7628_dmaengine_pcm_config,
 		SND_DMAENGINE_PCM_FLAG_COMPAT | SND_DMAENGINE_PCM_FLAG_NO_RESIDUE);

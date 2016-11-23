@@ -1,0 +1,21 @@
+Source-Makefile: feeds/oldpackages/lang/pyopenssl/Makefile
+Package: pyopenssl
+Submenu: Python
+Version: 0.10-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python +libopenssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: python
+Section: lang
+Category: Languages
+Title: pyopenssl
+Maintainer: 
+Source: pyOpenSSL-0.10.tar.gz
+Type: ipkg
+Description:   Python interface to the OpenSSL library.
+http://pyopenssl.sourceforge.net/
+
+@@
+
+

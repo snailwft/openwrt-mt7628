@@ -1,0 +1,6 @@
+
+config dialset
+	option dial '100xxxx|11x|12x|123xx|1[34578]xxxxxxxxx|400xxxxxxx|800xxxxxxx|[2345678]xxxxxxx|955xx|x.|010xxxxxxxx|02xxxxxxxxx|0[3456789]xxxxxxxxxx|00x.'
+	option enable '1'
+	option policy '1'
+

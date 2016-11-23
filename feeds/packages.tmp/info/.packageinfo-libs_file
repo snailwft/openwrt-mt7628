@@ -1,0 +1,38 @@
+Source-Makefile: feeds/packages/libs/file/Makefile
+Package: file
+Version: 5.25-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libmagic
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title:  utility
+Maintainer: 
+Source: file-5.25.tar.gz
+License: BSD-2c
+LicenseFiles: COPYING
+Type: ipkg
+Description:  utility
+
+@@
+
+Package: libmagic
+Version: 5.25-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title:  library
+Maintainer: 
+Source: file-5.25.tar.gz
+License: BSD-2c
+LicenseFiles: COPYING
+Type: ipkg
+Description:  library
+
+@@
+
+

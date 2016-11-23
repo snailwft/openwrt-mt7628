@@ -1,0 +1,37 @@
+Source-Makefile: package/feeds/oldpackages/libzstream/Makefile
+Package: libzstream
+Version: 2012-06-11-3b9748999aa3d81a5811eff1cc221266a2588e28
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libubox +libopenssl
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: minimalistic network stream library
+Maintainer: 
+Source: libzstream-2012-06-11-3b9748999aa3d81a5811eff1cc221266a2588e28.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description: minimalistic network stream library
+
+@@
+
+Package: zstream
+Submenu: File Transfer
+Version: 2012-06-11-3b9748999aa3d81a5811eff1cc221266a2588e28
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libzstream
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: minimalistic network stream client
+Maintainer: 
+Source: libzstream-2012-06-11-3b9748999aa3d81a5811eff1cc221266a2588e28.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description: minimalistic network stream client
+
+@@
+
+

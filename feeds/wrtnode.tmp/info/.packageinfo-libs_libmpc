@@ -1,0 +1,18 @@
+Source-Makefile: feeds/wrtnode/libs/libmpc/Makefile
+Package: libmpc
+Version: 1.0.2-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libgmp +libmpfr
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: MPC library
+Maintainer: Wen Peng Xiao <xiaowp@gmail.com>
+Source: mpc-1.0.2.tar.gz
+Type: ipkg
+Description:   The Mpc is a C library for the arithmetic of complex numbers with arbitrarily high precision and correct rounding of the result.
+Wen Peng Xiao <xiaowp@gmail.com>
+@@
+
+

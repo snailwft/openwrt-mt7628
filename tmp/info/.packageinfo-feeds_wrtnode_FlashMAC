@@ -1,0 +1,19 @@
+Source-Makefile: package/feeds/wrtnode/FlashMAC/Makefile
+Package: FlashMAC
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: FlashMAC
+Category: WRTnode
+Title: WRTnode flash MAC by web
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: wrtnode
+Description: 	This package provides a way that wrtnode flash MAC through web.
+
+@@
+
+

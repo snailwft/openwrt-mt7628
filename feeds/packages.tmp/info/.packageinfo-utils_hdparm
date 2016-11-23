@@ -1,0 +1,21 @@
+Source-Makefile: feeds/packages/utils/hdparm/Makefile
+Package: hdparm
+Submenu: disc
+Version: 9.45-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: Hard disk drive configuration utilitity
+Maintainer: Richard Kunze <richard.kunze@web.de>
+Source: hdparm-9.45.tar.gz
+License: BSD-Style Open Source License
+Type: ipkg
+Description:  get/set SATA/IDE device parameters
+http://sourceforge.net/projects/hdparm/
+Richard Kunze <richard.kunze@web.de>
+@@
+
+

@@ -1,0 +1,24 @@
+Source-Makefile: feeds/packages/net/seafile-seahub/Makefile
+Package: seafile-seahub
+Version: 4.1.2-3fb1288f920de03a4e2e6a06b60671ce98971742
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python +simplejson +python-imglib +python-setuptools
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: python-setuptools
+Section: net
+Category: Network
+Title: Seafile server - seahub component
+Maintainer: Gergely Kiss <mail.gery@gmail.com>
+Source: seafile-seahub-4.1.2-3fb1288f920de03a4e2e6a06b60671ce98971742.tar.gz
+License: Apache-2.0
+Type: ipkg
+Description:    The web end of seafile server.
+
+   NOTE: in order to have better performance, language support is turned off by default.
+   Please set 'USE_I18N = True' in seahub_settings.py to support multiple languages.
+http://seafile.com/
+Gergely Kiss <mail.gery@gmail.com>
+@@
+
+

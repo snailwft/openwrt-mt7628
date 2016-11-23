@@ -1,0 +1,18 @@
+Source-Makefile: feeds/wrtnode/wrtnode/wrtbox/Makefile
+Package: wrtbox
+Version: 0.1-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: opt
+Category: WRTnode
+Title: wrtbox-- The Swiss Army Knife of WRTnode
+Maintainer: 
+Source: 
+Type: ipkg
+Description: wrtbox-- The Swiss Army Knife of WRTnode
+
+@@
+
+

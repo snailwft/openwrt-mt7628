@@ -1,0 +1,20 @@
+Source-Makefile: feeds/packages/libs/libarchive/Makefile
+Package: libarchive
+Version: 3.1.2-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libopenssl +zlib
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: libs
+Category: Libraries
+Title: Multi-format archive and compression library
+Maintainer: Johannes Morgenroth <morgenroth@ibr.cs.tu-bs.de>
+Source: libarchive-3.1.2.tar.gz
+License: BSD-2-Clause
+Type: ipkg
+Description: Multi-format archive and compression library
+http://www.libarchive.org/
+Johannes Morgenroth <morgenroth@ibr.cs.tu-bs.de>
+@@
+
+

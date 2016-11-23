@@ -1,0 +1,19 @@
+Source-Makefile: package/feeds/wrtnode/spi-bridge/Makefile
+Package: spi-bridge
+Version: 1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: spi-bridge
+Category: WRTnode
+Title: WRTnode2r bridge between 7688 and stm32.
+Maintainer: 
+Source: 
+Type: ipkg
+Feed: wrtnode
+Description:   This package is a bridge connected between 7688 and stm32.
+
+@@
+
+

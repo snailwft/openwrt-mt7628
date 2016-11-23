@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/oldpackages/python-json/Makefile
+Package: python-json
+Submenu: Python
+Version: 3_4-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +python-mini
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: language-python
+Category: Languages
+Title: json-py
+Maintainer: 
+Source: json-py-3_4.zip
+Type: ipkg
+Feed: oldpackages
+Description: json-py
+http://sourceforge.net/projects/json-py/
+
+@@
+
+

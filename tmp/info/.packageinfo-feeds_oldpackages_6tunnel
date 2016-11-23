@@ -1,0 +1,20 @@
+Source-Makefile: package/feeds/oldpackages/6tunnel/Makefile
+Package: 6tunnel
+Version: 0.11rc2-3
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpcap +kmod-sit
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: IPv4 / IPv6 tunnel proxy
+Maintainer: 
+Source: 6tunnel-0.11rc2.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description: IPv4 / IPv6 tunnel proxy
+http://toxygen.net/6tunnel/
+
+@@
+
+

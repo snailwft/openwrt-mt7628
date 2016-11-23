@@ -1,0 +1,21 @@
+Source-Makefile: package/feeds/oldpackages/ipython/Makefile
+Package: ipython
+Submenu: Python
+Version: 0.8.2-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Section: lang
+Category: Languages
+Title: ipython
+Maintainer: 
+Source: ipython-0.8.2.tar.gz
+Type: ipkg
+Feed: oldpackages
+Description:   An enhanced interactive Python shell from the SciPy project
+http://ipython.scipy.org/
+
+@@
+
+

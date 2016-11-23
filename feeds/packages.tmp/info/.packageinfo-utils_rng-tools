@@ -1,0 +1,21 @@
+Source-Makefile: feeds/packages/utils/rng-tools/Makefile
+Package: rng-tools
+Version: 5-1
+Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread 
+Conflicts: 
+Menu-Depends: 
+Provides: 
+Build-Depends: USE_UCLIBC:argp-standalone
+Section: utils
+Category: Utilities
+Title: Daemon for adding entropy to kernel entropy pool
+Maintainer: Hannu Nyman <hannu.nyman@iki.fi>
+Source: rng-tools-5.tar.gz
+License: GPLv2
+Type: ipkg
+Description: Daemon for adding entropy to kernel entropy pool
+http://sourceforge.net/projects/gkernel/
+Hannu Nyman <hannu.nyman@iki.fi>
+@@
+
+
