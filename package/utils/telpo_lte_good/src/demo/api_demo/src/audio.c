@@ -18,6 +18,8 @@
 
 #include "api_demo.h"
 #include "macro.h"
+#include <string.h>
+#include <time.h>
 
 /**************************************/
 static uInt8 checkSum(char *str)

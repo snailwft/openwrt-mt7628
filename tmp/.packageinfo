@@ -26360,7 +26360,7 @@ Florian Fainelli <florian@openwrt.org>
 @@
 
 
-Source-Makefile: package/utils/telpo_lte/Makefile
+Source-Makefile: package/utils/telpo_lte_good/Makefile
 Package: telpo_lte
 Version: 1
 Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread
@@ -26370,42 +26370,6 @@ Provides:
 Section: utils
 Category: Utilities
 Title: telpo_lte -- prints a snarky message
-Maintainer: 
-Source: 
-Type: ipkg
-Description: 	It's my first package demo.
-
-@@
-
-
-Source-Makefile: package/utils/telpo_lte_demo/Makefile
-Package: telpo_lte_demo
-Version: 1
-Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread
-Conflicts: 
-Menu-Depends: 
-Provides: 
-Section: utils
-Category: Utilities
-Title: telpo_lte_demo -- prints a snarky message
-Maintainer: 
-Source: 
-Type: ipkg
-Description: 	It's my first package demo.
-
-@@
-
-
-Source-Makefile: package/utils/telpo_lte_right/Makefile
-Package: telpo_lte_right
-Version: 1
-Depends: +libc +SSP_SUPPORT:libssp +USE_GLIBC:librt +USE_GLIBC:libpthread +libpthread
-Conflicts: 
-Menu-Depends: 
-Provides: 
-Section: utils
-Category: Utilities
-Title: telpo_lte_right -- prints a snarky message
 Maintainer: 
 Source: 
 Type: ipkg

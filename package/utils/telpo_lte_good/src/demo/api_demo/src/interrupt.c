@@ -120,7 +120,7 @@ void irq_demo_check_interrupts(chanState *pState)
     }
 }
 
-#if 1
+
 void interrupt_handler(chanState *arg)
 {
 	chanState *pState = arg;
@@ -134,9 +134,8 @@ void interrupt_handler(chanState *arg)
 	irqs.number = 0;
 	int i, ret = 0;
 	Delay(pProTimer, poll_interval);
-	//pthread_mutex_lock(&cid_mutex);
 	ret = ProSLIC_GetInterrupts(pState->ProObj, &irqs);
-	//pthread_mutex_unlock(&cid_mutex);
+
 	if (ret == RC_REINIT_REQUIRED)
 	{
 		dbug_log(__FILE__,__LINE__,"Soft Reset Required\n");
@@ -163,7 +162,6 @@ void interrupt_handler(chanState *arg)
 			/* If returning onhook, set to default onhook state */
 			if (irqs.irqs[i] == IRQ_LOOP_STATUS)
 			{
-				//proslic_read_hook_status(ports[0].ProObj,&reg);
 				ProSLIC_ReadHookStatus(pState->ProObj,&reg);
 				if (reg == PROSLIC_ONHOOK) // 0 ±íÊ¾¹Ò»ú
 				{
@@ -210,7 +208,7 @@ void interrupt_handler(chanState *arg)
 
 	return ;
 }
-#endif
+
 
 /***************************************/
 

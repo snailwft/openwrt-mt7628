@@ -92831,32 +92831,6 @@ endmenu
 		 It's my first package demo.
 		 
 
-	config PACKAGE_telpo_lte_demo
-		tristate "telpo_lte_demo................. telpo_lte_demo -- prints a snarky message"
-		default y if DEFAULT_telpo_lte_demo
-		default m if ALL
-		select PACKAGE_libc
-		select PACKAGE_librt if USE_GLIBC
-		select PACKAGE_libpthread
-		select PACKAGE_libpthread if USE_GLIBC
-		select PACKAGE_libssp if SSP_SUPPORT
-		help
-		 It's my first package demo.
-		 
-
-	config PACKAGE_telpo_lte_right
-		tristate "telpo_lte_right............... telpo_lte_right -- prints a snarky message"
-		default y if DEFAULT_telpo_lte_right
-		default m if ALL
-		select PACKAGE_libc
-		select PACKAGE_librt if USE_GLIBC
-		select PACKAGE_libpthread
-		select PACKAGE_libpthread if USE_GLIBC
-		select PACKAGE_libssp if SSP_SUPPORT
-		help
-		 It's my first package demo.
-		 
-
 	config PACKAGE_tesseract
 		tristate "tesseract............................... Tesseract Open Source OCR Engine"
 		default y if DEFAULT_tesseract

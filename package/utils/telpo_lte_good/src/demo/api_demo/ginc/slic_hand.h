@@ -56,7 +56,6 @@ typedef enum SLIC_HOOKSTATE_TAG
 	SLIC_OFF_HOOK,      	//摘机    
 }SLIC_HOOKSTATE;
 
-
 typedef struct
 {
 	SLIC_HOOKSTATE hook;           		// 摘机为1,挂机为0
