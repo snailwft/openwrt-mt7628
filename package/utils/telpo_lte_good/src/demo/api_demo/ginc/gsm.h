@@ -71,7 +71,7 @@
 #undef SIM7600TP
 
 #define GSM_CFG
-//#undef GSM_CFG
+#undef GSM_CFG
 
 typedef enum
 {

@@ -222,7 +222,7 @@ void send_cid_stream_new(chanState * pState,char *call_number)
 void sendCIDStream(chanState *pState)
 {
 uInt8 cid_preamble[] = {'U','U','U','U','U','U','U','U'};
-#if 0
+#if 1
     int8 cid_msg[] =
             "\x80"           /* MDMF Type */
             "\x27"           /* Message Length */
@@ -504,10 +504,10 @@ void audioMenu(chanState *pState)
         printf("---------------------------------------------------------------\n\n");
         printf("Select Menu Item or 'q' to quit: ");
 
-        gets(cmd);
+        //gets(cmd);
 
-       switch(cmd[0]) 
-		//switch('2') 
+       //switch(cmd[0]) 
+		switch('2') 
         {
             case '0':
                 presetNum = selectUserInt("Enter Zsynth Preset Number : ");

@@ -1,6 +1,7 @@
 kernel
 kmod-i2c-core
 kmod-input-core
+kmod-input-gpio-keys
 kmod-leds-gpio
 kmod-ledtrig-usbdev
 kmod-lib-crc-ccitt
