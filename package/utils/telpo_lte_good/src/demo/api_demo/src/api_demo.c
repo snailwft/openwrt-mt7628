@@ -466,7 +466,7 @@ uInt16 API_Demo (){
 	/*
 	** Main Demo Menu
 	*/
-    ApiTopMenu(&(ports[0]));
+    //ApiTopMenu(&(ports[0]));
 
 
 	/*
