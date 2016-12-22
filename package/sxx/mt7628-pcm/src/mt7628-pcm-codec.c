@@ -39,6 +39,23 @@ static struct snd_soc_dai_driver mt7628_pcm_codec_dai[] = {
             .formats = MT7628_FORMATS,
         },
 	},
+	{
+		.name = "mt7628-pcm-codec",
+		.playback = {
+			.stream_name = "mt7628-pcm-codec-playback",
+			.channels_min = 1,
+			.channels_max = 2,
+			.rates = MT7628_PCM_RATES,
+			.formats = MT7628_FORMATS,
+		},
+        .capture = {
+            .stream_name = "mt7628-pcm-codec-capture",
+            .channels_min = 1,
+            .channels_max = 2,
+            .rates = MT7628_PCM_RATES,
+            .formats = MT7628_FORMATS,
+        },
+	},
 };
 
 static struct snd_soc_codec_driver soc_codec_dev_mt7628_pcm;
@@ -53,7 +70,7 @@ static int mt7628_pcm_codec_probe(struct platform_device *pdev)
 {
 	dev_err(&pdev->dev, ".............helloworld.................\n");
 	return snd_soc_register_codec(&pdev->dev,
-			&soc_codec_dev_mt7628_pcm, mt7628_pcm_codec_dai, 1);
+			&soc_codec_dev_mt7628_pcm, mt7628_pcm_codec_dai, ARRAY_SIZE(mt7628_pcm_codec_dai));
 }
 
 static int mt7628_pcm_codec_remove(struct platform_device *pdev)

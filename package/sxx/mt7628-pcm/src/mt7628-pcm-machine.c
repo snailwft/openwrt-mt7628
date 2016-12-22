@@ -57,19 +57,38 @@ static struct snd_soc_ops mt7628_pcm_machine_ops = {
 	.hw_params = mt7628_pcm_machine_hw_params,
 };
 
-static struct snd_soc_dai_link mt7628_pcm_machine_dai = {
+#if 0
+static struct snd_soc_dai_link mt7628_pcm_machine_dai = { // 这里定义两个
 	.name = "mt7628-pcm-machine",
 	.stream_name = "mt7628-pcm-stream",
     .ops = &mt7628_pcm_machine_ops,
 	.init = mt7628_pcm_machine_init,
-	.codec_dai_name = "mt7628-pcm-codec",
+	.codec_dai_name = "mt7628-pcm-codec",  // 这个针对codec.c mt7628_pcm_codec_dai .name
 };
+#endif
+static struct snd_soc_dai_link mt7628_pcm_machine_dai[] = {
+	{ // 这里定义两个
+		.name = "mt7628-pcm-machine1",
+		.stream_name = "mt7628-pcm-stream1",
+	    .ops = &mt7628_pcm_machine_ops,
+		.init = mt7628_pcm_machine_init,
+		.codec_dai_name = "mt7628-pcm-codec",  // 这个针对codec.c mt7628_pcm_codec_dai .name
+	},
+	{ // 这里定义两个
+		.name = "mt7628-pcm-machine2",
+		.stream_name = "mt7628-pcm-stream2",
+	    .ops = &mt7628_pcm_machine_ops,
+		.init = mt7628_pcm_machine_init,
+		.codec_dai_name = "mt7628-pcm-codec",  // 这个针对codec.c mt7628_pcm_codec_dai .name
+	},
+};
+
 
 static struct snd_soc_card mt7628_pcm_card = {
 	.name = "mt7628-pcm-machine",
 	.owner = THIS_MODULE,
-	.dai_link = &mt7628_pcm_machine_dai,
-	.num_links = 1,
+	.dai_link = mt7628_pcm_machine_dai,  
+	.num_links = 2,		//修改为2
 
 	.dapm_widgets = mt7628_pcm_machine_widgets,
 	.num_dapm_widgets = ARRAY_SIZE(mt7628_pcm_machine_widgets),
@@ -86,14 +105,16 @@ static int mt7628_pcm_machine_probe(struct platform_device *pdev)
 
 	card->dev = &pdev->dev;
 
-	mt7628_pcm_machine_dai.cpu_of_node = of_parse_phandle(np, "cpu-dai", 0);
-	mt7628_pcm_machine_dai.codec_of_node = of_parse_phandle(np, "codec-dai", 0);
-	mt7628_pcm_machine_dai.platform_of_node = mt7628_pcm_machine_dai.cpu_of_node;
-
+	mt7628_pcm_machine_dai[0].cpu_of_node = of_parse_phandle(np, "cpu-dai", 0);
+	mt7628_pcm_machine_dai[0].codec_of_node = of_parse_phandle(np, "codec-dai", 0);
+	mt7628_pcm_machine_dai[0].platform_of_node = mt7628_pcm_machine_dai[0].cpu_of_node;
+	
+	mt7628_pcm_machine_dai[1].cpu_of_node = of_parse_phandle(np, "cpu-dai", 0);
+	mt7628_pcm_machine_dai[1].codec_of_node = of_parse_phandle(np, "codec-dai", 0);
+	mt7628_pcm_machine_dai[1].platform_of_node = mt7628_pcm_machine_dai[1].cpu_of_node;
 	ret = snd_soc_register_card(card);
 	if (ret) {
-		dev_err(&pdev->dev, "snd_soc_register_card() failed: %d\n",
-			ret);
+		dev_err(&pdev->dev, "snd_soc_register_card() failed: %d\n",ret);
 	}
 	return ret;
 }

@@ -310,7 +310,7 @@ static int mt7628_pcm_dai_probe(struct snd_soc_dai *dai)
 	mt7628_pcm_write(pcm, PCM_GLB_CFG, PCM_GLB_CFG_DFT_THRES);
 	mt7628_pcm_write(pcm, PCM_INT_EN, 0);// disable all interrupts
 
-	///////////// pcm general config
+	///////////// pcm general config////////
 	cfg = mt7628_pcm_read(pcm, PCM_PCM_CFG);
 	cfg &= ~PCM_PCM_CFG_LONG_FSYNC; //short sync mode
 	//cfg |= PCM_PCM_CFG_LONG_FSYNC; //long sync mode
@@ -365,25 +365,49 @@ static const struct snd_soc_dai_ops mt7628_pcm_dai_ops = {
 
 #define MT7628_PCM_FMTS (SNDRV_PCM_FMTBIT_S8 |SNDRV_PCM_FMTBIT_U8|SNDRV_PCM_FMTBIT_S16_LE|SNDRV_PCM_FMTBIT_S16_BE)
 
-static struct snd_soc_dai_driver mt7628_pcm_dai = {
-	.probe = mt7628_pcm_dai_probe,
-	.remove = mt7628_pcm_dai_remove,
-	.playback = {
-		.channels_min = 1,
-		.channels_max = 2,
-		.rates = SNDRV_PCM_RATE_8000_48000,
-		.formats = MT7628_PCM_FMTS,
+static struct snd_soc_dai_driver mt7628_pcm_dai[] = {
+	{  //snd_soc_dai_driver
+		.name = "mt7628-pcm",
+		.probe = mt7628_pcm_dai_probe,
+		.remove = mt7628_pcm_dai_remove,
+		.playback = {
+			.channels_min = 1,
+			.channels_max = 2,
+			.rates = SNDRV_PCM_RATE_8000_48000,
+			.formats = MT7628_PCM_FMTS,
+		},
+		.capture = {
+			.channels_min = 1,
+			.channels_max = 2,
+			.rates = SNDRV_PCM_RATE_8000_48000,
+			.formats = MT7628_PCM_FMTS,
+		},
+		.symmetric_rates = 1,
+		.ops = &mt7628_pcm_dai_ops,
+		.suspend = mt7628_pcm_suspend,
+		.resume = mt7628_pcm_resume,
 	},
-	.capture = {
-		.channels_min = 1,
-		.channels_max = 2,
-		.rates = SNDRV_PCM_RATE_8000_48000,
-		.formats = MT7628_PCM_FMTS,
+	{  //snd_soc_dai_driver
+		.name = "mt7628-pcm",
+		.probe = mt7628_pcm_dai_probe,
+		.remove = mt7628_pcm_dai_remove,
+		.playback = {
+			.channels_min = 1,
+			.channels_max = 2,
+			.rates = SNDRV_PCM_RATE_8000_48000,
+			.formats = MT7628_PCM_FMTS,
+		},
+		.capture = {
+			.channels_min = 1,
+			.channels_max = 2,
+			.rates = SNDRV_PCM_RATE_8000_48000,
+			.formats = MT7628_PCM_FMTS,
+		},
+		.symmetric_rates = 1,
+		.ops = &mt7628_pcm_dai_ops,
+		.suspend = mt7628_pcm_suspend,
+		.resume = mt7628_pcm_resume,
 	},
-	.symmetric_rates = 1,
-	.ops = &mt7628_pcm_dai_ops,
-	.suspend = mt7628_pcm_suspend,
-	.resume = mt7628_pcm_resume,
 };
 
 static const struct snd_pcm_hardware mt7620_pcm_hardware = {
@@ -447,7 +471,7 @@ static int mt7628_pcm_dev_probe(struct platform_device *pdev)
 
 	platform_set_drvdata(pdev, pcm);
 	ret = snd_soc_register_component(&pdev->dev, &mt7628_pcm_component,
-					 &mt7628_pcm_dai, 1);
+					 mt7628_pcm_dai, ARRAY_SIZE(mt7628_pcm_dai));
 
 	if (!ret) {
 		dev_err(&pdev->dev, "loaded\n");

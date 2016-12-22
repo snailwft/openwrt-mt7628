@@ -221,11 +221,11 @@ License: GPLv2
 Section: kernel
 Status: unknown hold not-installed
 Architecture: ramips_24kec
-Installed-Size: 105
+Installed-Size: 104
 Filename: kmod-ac97_3.18.29-1_ramips_24kec.ipk
-Size: 831
-MD5Sum: bfba594119c85fd285bf0b359722ebcc
-SHA256sum: d1e0ad633000c581c93107ec0fe91934091afa7f9dbb3a3eaadf2e409f52fbf9
+Size: 832
+MD5Sum: 266d75c81f6ebaafdfc8869620a8935b
+SHA256sum: 85bee2e2baa039cf6e35164e6f64d5831b8e34c51ed09b0d55f938512d2d7566
 Description:  The ac97 controller
 
 Package: kmod-gpio-button-hotplug
@@ -236,9 +236,9 @@ Section: kernel
 Architecture: ramips_24kec
 Installed-Size: 5209
 Filename: kmod-gpio-button-hotplug_3.18.29-1_ramips_24kec.ipk
-Size: 6162
-MD5Sum: ccef3d9a9e8d7be0031711b0bb604664
-SHA256sum: 134f9814fcb73371d8c193fd37eb6bacb29bda70063ab907c5d03b1d8c49049c
+Size: 6158
+MD5Sum: ce02ab4e28a58cb1ea98c694df087ecc
+SHA256sum: 80ce396f674722769ac14a5f5e9eb04d536ec802beb3fba2074521b391bb408a
 Description:  This is a replacement for the following in-kernel drivers:
  1) gpio_keys (KEYBOARD_GPIO)
  2) gpio_keys_polled (KEYBOARD_GPIO_POLLED)
@@ -253,11 +253,11 @@ Depends: kernel (=3.18.29-1-c002a7933cc12348d68c4c69474e3add)
 Source: package/kernel/gpio_drv
 Section: kernel
 Architecture: ramips_24kec
-Installed-Size: 1906
+Installed-Size: 1905
 Filename: kmod-gpio_drv_3.18.29-1_ramips_24kec.ipk
-Size: 2830
-MD5Sum: b5ad388ba73062a90e48a5e97cf86dc9
-SHA256sum: b3a5bdd3e65f48e61d62f55f39db5f64855c065a379eb90aed93bed03113f849
+Size: 2831
+MD5Sum: 55eafa453f0bfeeed3373d3c2de58d14
+SHA256sum: d0049cb76ad2e4eb1ef863b81a6ae8998833dc6c5d34f0417ccc68bc637333b6
 Description:  This is a replacement for the following in-kernel drivers:
  1) gpio_keys (KEYBOARD_GPIO)
  2) gpio_keys_polled (KEYBOARD_GPIO_POLLED)
@@ -371,11 +371,11 @@ License: GPLv2
 Section: kernel
 Status: unknown hold not-installed
 Architecture: ramips_24kec
-Installed-Size: 7983
+Installed-Size: 7987
 Filename: kmod-ip6tables_3.18.29-1_ramips_24kec.ipk
-Size: 8814
-MD5Sum: 1afa72ed325f46328627c6ec7bcaa736
-SHA256sum: 5ac5b49dfe3a324bbe119fce9a5637c13c90966c761cf55cb79036134a9a8ccd
+Size: 8831
+MD5Sum: 756aa1dfacdf544f84f1faa9b514aa35
+SHA256sum: e891e429e8c899cf14fe02246c3e4e03fe3703e26abbb172803a2c06fbfb3777
 Description:  Netfilter IPv6 firewalling support
 
 Package: kmod-ipt-conntrack
@@ -386,11 +386,11 @@ License: GPLv2
 Section: kernel
 Status: unknown hold not-installed
 Architecture: ramips_24kec
-Installed-Size: 4721
+Installed-Size: 4720
 Filename: kmod-ipt-conntrack_3.18.29-1_ramips_24kec.ipk
-Size: 5577
-MD5Sum: 87e8a07a0ef4e5dd997d2c3f57cfb4c1
-SHA256sum: 6d4c51e882d93622071389c5fcb6bc277eaeb499c827e069566ffd90298346d2
+Size: 5574
+MD5Sum: 585e4c9e8dfc179be18b1e7f03a58c0a
+SHA256sum: e835af5fd78242047532894c73d9b3395829a045e201dd304e071b02b0eb6e70
 Description:  Netfilter (IPv4) kernel modules for connection tracking
  Includes:
  - conntrack
@@ -407,11 +407,11 @@ License: GPLv2
 Section: kernel
 Status: unknown hold not-installed
 Architecture: ramips_24kec
-Installed-Size: 16022
+Installed-Size: 16027
 Filename: kmod-ipt-core_3.18.29-1_ramips_24kec.ipk
-Size: 16930
-MD5Sum: 78857f82548e3aee818366f72340768c
-SHA256sum: 0407a9b68b05d50c0e35acbbaeecc667699c985de7416c27c27c67916005736c
+Size: 16935
+MD5Sum: 73dab01f6f08dbe891f51c471d8cee2b
+SHA256sum: e2d263e5eb5ccf16c191cb8718bb6b82deaeba8a5c1d8ae8ac7afe17a326bdf2
 Description:  Netfilter core kernel modules
  Includes:
  - comment
@@ -430,11 +430,11 @@ License: GPLv2
 Section: kernel
 Status: unknown hold not-installed
 Architecture: ramips_24kec
-Installed-Size: 4011
+Installed-Size: 4018
 Filename: kmod-ipt-nat_3.18.29-1_ramips_24kec.ipk
-Size: 4888
-MD5Sum: e961450b119b5531d8ca52ccef336e18
-SHA256sum: 84b6511831ab71b78e50624bcc2cc445e3fb96a331086216890f173802a1b811
+Size: 4878
+MD5Sum: c4dcf6ec0790c0dd8bf918da6def8e0c
+SHA256sum: 9caaf414452d2b5416f750ac5e7d282c06b7aef154ddca6df9ca119a51296e98
 Description:  Netfilter (IPv4) kernel modules for basic NAT targets
  Includes:
  - MASQUERADE
@@ -477,11 +477,11 @@ License: GPLv2
 Section: kernel
 Status: unknown hold not-installed
 Architecture: ramips_24kec
-Installed-Size: 2133
+Installed-Size: 2134
 Filename: kmod-ledtrig-usbdev_3.18.29-1_ramips_24kec.ipk
-Size: 2987
-MD5Sum: 6b8f4a5e18824b2949d58b6a4000bb7c
-SHA256sum: aea8b5f306775078bb813c026d4b808500a21eb8fbd079783f005e450252174e
+Size: 2995
+MD5Sum: 10ac0edf07256a9092b560e1b384fe1a
+SHA256sum: 11b62f0cd3164d728325bd1bf096403e5b7ca2fdfd006f573b5c66e89adb4b30
 Description:  Kernel module to drive LEDs based on USB device presence/activity
 
 Package: kmod-lib-crc-ccitt
@@ -535,11 +535,11 @@ Depends: kernel (=3.18.29-1-c002a7933cc12348d68c4c69474e3add), kmod-sound-core, 
 Source: package/sxx/mt7628-pcm
 Section: sxx 
 Architecture: ramips_24kec
-Installed-Size: 3553
+Installed-Size: 3698
 Filename: kmod-mt7628-pcm_3.18.29+2013-12-04-1_ramips_24kec.ipk
-Size: 4347
-MD5Sum: 6d536cd6c417339724ef2e81f44d3f3c
-SHA256sum: e3a074df394d817e1c4dea0128ec6e0362ffc1f1889fa9ab9ea8a9309931c58f
+Size: 4450
+MD5Sum: 2e628cc68104e9939a9050ac6a9a9755
+SHA256sum: 6aac55d7a7c0f3454c15b50ec06fa59d51a7329f0b289e866d0e06f27cea847d
 Description:  I2S on mt7628
 
 Package: kmod-nf-conntrack6
@@ -550,11 +550,11 @@ License: GPLv2
 Section: kernel
 Status: unknown hold not-installed
 Architecture: ramips_24kec
-Installed-Size: 8849
+Installed-Size: 8848
 Filename: kmod-nf-conntrack6_3.18.29-1_ramips_24kec.ipk
-Size: 9682
-MD5Sum: ca50c052246bbdebb755558da1cb454c
-SHA256sum: 4e5fafd1660a56042c1b72d77b156969388bdfc28158a6a181633dec095284ad
+Size: 9686
+MD5Sum: b880e04712fec5f36ea60179a794aaf6
+SHA256sum: 5313142225cc334aee88f8e4669ab34c569a11083dee164137892711ffb4fd3b
 Description:  Netfilter IPv6 connection tracking
 
 Package: kmod-nf-conntrack
@@ -580,11 +580,11 @@ License: GPLv2
 Section: kernel
 Status: unknown hold not-installed
 Architecture: ramips_24kec
-Installed-Size: 7558
+Installed-Size: 7561
 Filename: kmod-nf-ipt6_3.18.29-1_ramips_24kec.ipk
-Size: 8344
-MD5Sum: ba1c51e1f7e018c9126efca25fc66883
-SHA256sum: 4d894dfce9649e98ed585c2c33bed662e0cf780d68b3c5fc7cb9857929177d3c
+Size: 8354
+MD5Sum: 341b690b680a5592fb8ee2bf6e19553c
+SHA256sum: 724d108e4bd0b9843ce822acecd83f619bf81d810bd459b41e774ebb65bbc5a3
 Description:  Ip6tables core
 
 Package: kmod-nf-ipt
@@ -657,11 +657,11 @@ Depends: kernel (=3.18.29-1-c002a7933cc12348d68c4c69474e3add)
 Source: package/kernel/pcm_7628_drv
 Section: kernel
 Architecture: ramips_24kec
-Installed-Size: 4221
+Installed-Size: 4219
 Filename: kmod-pcm_drv_3.18.29-1_ramips_24kec.ipk
-Size: 5142
-MD5Sum: 1d03a2db8a87af1fc4aa98c1533b08ed
-SHA256sum: 1401e653b2aac416cbd2595e7ef6d9f8c399601447d646bf582ebbb373f3b0b6
+Size: 5138
+MD5Sum: 97f0275a843fc705469610e049a0cacd
+SHA256sum: 09dde670ae5913922515a9b623d0b66edc9f82e9df5fd66a6825a45c793716d8
 Description:  This is a replacement for the following in-kernel drivers:
  1) gpio_keys (KEYBOARD_GPIO)
  2) gpio_keys_polled (KEYBOARD_GPIO_POLLED)
@@ -680,9 +680,9 @@ Status: unknown hold not-installed
 Architecture: ramips_24kec
 Installed-Size: 20315
 Filename: kmod-ppp_3.18.29-1_ramips_24kec.ipk
-Size: 21099
-MD5Sum: e06c3d928cab9d72d04cc99d5165e8e7
-SHA256sum: ce78ba373844336e4d7dfcfbc9774a05bf6067fd10fa328c5a65b71d35ab6e93
+Size: 21096
+MD5Sum: a9b696d1792f3b2efebb2ad21f4117b4
+SHA256sum: 8318513812a09bbf01f261094c2588df38f5dc5b3600da6ab3f54b21cc2b401a
 Description:  Kernel modules for PPP support
 
 Package: kmod-pppoe
@@ -695,9 +695,9 @@ Status: unknown hold not-installed
 Architecture: ramips_24kec
 Installed-Size: 6477
 Filename: kmod-pppoe_3.18.29-1_ramips_24kec.ipk
-Size: 7341
-MD5Sum: 16a7ad94f5a2a0cffbdc4c659757e35d
-SHA256sum: 36fc3ba7139516689fd20f1ca769672ac51e71564d1047f51d75cf74b0b0a37d
+Size: 7338
+MD5Sum: 295d466eb01ab89e4cf3d371a70adfef
+SHA256sum: cd9c132581e8a1403e572e88d9949f5a061b768483cad466dcbd6a07ef8fb73c
 Description:  Kernel module for PPPoE (PPP over Ethernet) support
 
 Package: kmod-pppox
@@ -710,9 +710,9 @@ Status: unknown hold not-installed
 Architecture: ramips_24kec
 Installed-Size: 1594
 Filename: kmod-pppox_3.18.29-1_ramips_24kec.ipk
-Size: 2364
-MD5Sum: c919859170362b316c0a84c97c0f7637
-SHA256sum: d55867cbae0aafbc830545668be0a99cc810eeb34851930d4ff93231c7a976a6
+Size: 2373
+MD5Sum: d5777c145d95b1adea9fc80d87750eff
+SHA256sum: 6ae9c191c44c98d553cf67cbbd846ff359fbd826906b2a74684e42cdc5c69752
 Description:  Kernel helper module for PPPoE and PPTP support
 
 Package: kmod-regmap
@@ -770,9 +770,9 @@ Status: unknown hold not-installed
 Architecture: ramips_24kec
 Installed-Size: 59295
 Filename: kmod-sound-soc-core_3.18.29-1_ramips_24kec.ipk
-Size: 59875
-MD5Sum: afb740f938b60e81a45eb0856736e30c
-SHA256sum: ac5d7f215878875a640a374cf9609366e99b353bf923eb8b5656065ce511e909
+Size: 59844
+MD5Sum: 1fd999817bdc9adc98e2fe5ddb3e02c6
+SHA256sum: 886c856038023dcee60f8ee9e34d3019cd0aa02f8e56c4e82f42318eb6698d05
 Description:  SoC sound support
 
 Package: kmod-spi-dev
@@ -796,11 +796,11 @@ Depends: kernel (=3.18.29-1-c002a7933cc12348d68c4c69474e3add)
 Source: package/kernel/spi_drv
 Section: kernel
 Architecture: ramips_24kec
-Installed-Size: 3439
+Installed-Size: 3438
 Filename: kmod-spi_drv_3.18.29-1_ramips_24kec.ipk
-Size: 4369
-MD5Sum: d6bbd4e3edb5d87857e9eba57fbc368a
-SHA256sum: 8b122c98863b637a1d08767c601df2f61d55958af2a916f18bce3cd1f508187e
+Size: 4353
+MD5Sum: 2366ab1412b0e952a3970ca391c7ee78
+SHA256sum: da8d34fed540da79df09fca69d37c308c58010e252d21a9c2bfd562c8fbf1b2d
 Description:  This is a replacement for the following in-kernel drivers:
  1) gpio_keys (KEYBOARD_GPIO)
  2) gpio_keys_polled (KEYBOARD_GPIO_POLLED)
@@ -834,9 +834,9 @@ Status: unknown hold not-installed
 Architecture: ramips_24kec
 Installed-Size: 4626
 Filename: kmod-usb-net-qmi-wwan_3.18.29-1_ramips_24kec.ipk
-Size: 5219
-MD5Sum: 2f2babcd0db6e2d31dde850f462b1708
-SHA256sum: 5772cb16359bac3ab9e48d5766db8c99cb72ce1b338c12405883a7acd4ce6e74
+Size: 5207
+MD5Sum: afb87a5f1e78e835cc7946d88358fe11
+SHA256sum: 84507dc9b0bdc86c49c011f85a12c2e89d08a0814923c77b8babeec15ebd8703
 Description:  QMI WWAN driver for Qualcomm MSM based 3G and LTE modems
 
 Package: kmod-usb-net
@@ -879,9 +879,9 @@ Status: unknown hold not-installed
 Architecture: ramips_24kec
 Installed-Size: 5734
 Filename: kmod-usb-serial-option_3.18.29-1_ramips_24kec.ipk
-Size: 5680
-MD5Sum: ff5cc0b4e923bdb7d8715133b7d9a2aa
-SHA256sum: b4c22ff8cae757680d29cdc8bf3e31ab9e563f10c5cad477ca33a7f3178956db
+Size: 5676
+MD5Sum: 4bdaae6a3c7252dbd73fd40a5421ce13
+SHA256sum: 56b9fcaf986d7fabad2876846e65a61919ae60d9bf16686f05fdd886357db7c6
 Description:  Kernel support for Option HSDPA modems
 
 Package: kmod-usb-serial-wwan
@@ -892,11 +892,11 @@ License: GPLv2
 Section: kernel
 Status: unknown hold not-installed
 Architecture: ramips_24kec
-Installed-Size: 3855
+Installed-Size: 3853
 Filename: kmod-usb-serial-wwan_3.18.29-1_ramips_24kec.ipk
-Size: 4664
-MD5Sum: 2dc8d84c0aac7db7622ad438f2012560
-SHA256sum: 76909d2aa4b971ae751aa44e2236935068fa9b45d0dc7289fa7f96851feff85f
+Size: 4660
+MD5Sum: 620ec3f67f996b9c7c52a175cbdc7335
+SHA256sum: 2ff18f5df20d5fd0ba821ecf0ed58722666eb77778bd9a1379030c0309320a43
 Description:  Kernel support for USB GSM and CDMA modems
 
 Package: kmod-usb-serial
@@ -950,11 +950,11 @@ Depends: kernel (=3.18.29-1-c002a7933cc12348d68c4c69474e3add)
 Source: package/kernel/watchdog_drv
 Section: kernel
 Architecture: ramips_24kec
-Installed-Size: 2111
+Installed-Size: 2108
 Filename: kmod-watchdog_drv_3.18.29-1_ramips_24kec.ipk
-Size: 3035
-MD5Sum: fc1c338a4dfe268ebb4e88a2dc7691b5
-SHA256sum: 1f267aa8b938e30c246b0212d38348feb06d7d0950ea9ce6e5048ff390758254
+Size: 3027
+MD5Sum: 33d7a084c0b7375506d156be996c85f1
+SHA256sum: e52a13f8c968deb6674870b9fe7d20afef0a3ac928c6060daff200deb8bb097f
 Description:  This is a replacement for the following in-kernel drivers:
  1) gpio_keys (KEYBOARD_GPIO)
  2) gpio_keys_polled (KEYBOARD_GPIO_POLLED)
@@ -1496,11 +1496,11 @@ Depends: libc, libpthread
 Source: package/utils/telpo_lte_good
 Section: utils
 Architecture: ramips_24kec
-Installed-Size: 75137
+Installed-Size: 75624
 Filename: telpo_lte_1_ramips_24kec.ipk
-Size: 75706
-MD5Sum: bdf90101ad27adc0ec4632cd4e09b0b0
-SHA256sum: 0af1e5450f5101457034e5c74898418172efffb22e575be045653b9bacb2401b
+Size: 76134
+MD5Sum: 2459b0c10046781fc43421a92d43d29d
+SHA256sum: 107a762247b2988fb14b8f1f1f8769f31ae94de115268cb0b0cf19b62679ae9e
 Description:  It's my first package demo.
 
 Package: ubox
