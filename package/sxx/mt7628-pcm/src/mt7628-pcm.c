@@ -298,11 +298,17 @@ static void mt7628_init_pcm_config(struct mt7628_pcm *pcm)
 	dma_data->addr = pcm->phys_base + PCM_CH0_FIFO;
 }
 
+static int mt7628_pcm_dai_probe2(struct snd_soc_dai *dai)
+{
+	printk("hello..........................................2\n");
+	return 0;
+}
+
 static int mt7628_pcm_dai_probe(struct snd_soc_dai *dai)
 {
 	struct mt7628_pcm *pcm = snd_soc_dai_get_drvdata(dai);
 	uint32_t cfg;
-
+	printk("hello..........................................1\n");
 	mt7628_init_pcm_config(pcm);
 	dai->playback_dma_data = &pcm->playback_dma_data;
 	dai->capture_dma_data = &pcm->capture_dma_data;
@@ -367,7 +373,7 @@ static const struct snd_soc_dai_ops mt7628_pcm_dai_ops = {
 
 static struct snd_soc_dai_driver mt7628_pcm_dai[] = {
 	{  //snd_soc_dai_driver
-		.name = "mt7628-pcm",
+		.name = "mt7628-pcm1",
 		.probe = mt7628_pcm_dai_probe,
 		.remove = mt7628_pcm_dai_remove,
 		.playback = {
@@ -388,8 +394,8 @@ static struct snd_soc_dai_driver mt7628_pcm_dai[] = {
 		.resume = mt7628_pcm_resume,
 	},
 	{  //snd_soc_dai_driver
-		.name = "mt7628-pcm",
-		.probe = mt7628_pcm_dai_probe,
+		.name = "mt7628-pcm2",
+		.probe = mt7628_pcm_dai_probe2,
 		.remove = mt7628_pcm_dai_remove,
 		.playback = {
 			.channels_min = 1,
@@ -471,7 +477,7 @@ static int mt7628_pcm_dev_probe(struct platform_device *pdev)
 
 	platform_set_drvdata(pdev, pcm);
 	ret = snd_soc_register_component(&pdev->dev, &mt7628_pcm_component,
-					 mt7628_pcm_dai, ARRAY_SIZE(mt7628_pcm_dai));
+					 mt7628_pcm_dai, 2);
 
 	if (!ret) {
 		dev_err(&pdev->dev, "loaded\n");

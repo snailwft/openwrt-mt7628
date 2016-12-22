@@ -70,6 +70,7 @@ static struct snd_soc_dai_link mt7628_pcm_machine_dai[] = {
 	{ // 这里定义两个
 		.name = "mt7628-pcm-machine1",
 		.stream_name = "mt7628-pcm-stream1",
+		.cpu_dai_name	= "mt7628-pcm1",
 	    .ops = &mt7628_pcm_machine_ops,
 		.init = mt7628_pcm_machine_init,
 		.codec_dai_name = "mt7628-pcm-codec",  // 这个针对codec.c mt7628_pcm_codec_dai .name
@@ -77,6 +78,7 @@ static struct snd_soc_dai_link mt7628_pcm_machine_dai[] = {
 	{ // 这里定义两个
 		.name = "mt7628-pcm-machine2",
 		.stream_name = "mt7628-pcm-stream2",
+		.cpu_dai_name	= "mt7628-pcm2",
 	    .ops = &mt7628_pcm_machine_ops,
 		.init = mt7628_pcm_machine_init,
 		.codec_dai_name = "mt7628-pcm-codec",  // 这个针对codec.c mt7628_pcm_codec_dai .name

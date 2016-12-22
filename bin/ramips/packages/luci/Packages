@@ -30,11 +30,11 @@ Depends: libc, liblua, libnl-tiny
 Source: feeds/luci/libs/luci-lib-ip
 Section: luci
 Architecture: ramips_24kec
-Installed-Size: 9397
+Installed-Size: 9398
 Filename: luci-lib-ip_git-16.206.66468-6f5c466-1_ramips_24kec.ipk
-Size: 10104
-MD5Sum: f9fdc088aa87d99c8a1c0e67d646514e
-SHA256sum: 454158fa333bb43f6f687f583bf65bbc530d6c2fd4e3592400714a1cf83c6282
+Size: 10094
+MD5Sum: bc86c3bb274220dff0c1c429743fbfa9
+SHA256sum: b054144ba54be94ff47705b35c956e09b413bdb159071cf98d444b51f63ee96c
 Description:  Lua library for IP calculation and routing information
 
 Package: luci-lib-nixio
@@ -45,9 +45,9 @@ Section: luci
 Architecture: ramips_24kec
 Installed-Size: 29170
 Filename: luci-lib-nixio_git-16.206.66468-6f5c466-1_ramips_24kec.ipk
-Size: 29673
-MD5Sum: 2f8be9752a30e07511791ea54601007e
-SHA256sum: e8a284e8cf05a1e2d94f08b2d8436659db986925bd607b0640e7c3b96b4163a0
+Size: 29674
+MD5Sum: bdfbd5c7f715a71170ee68048a9cd750
+SHA256sum: f54570580abc0a8d6ebd429a63a14e3eb45e35834b47c98d3f587de5c1180031
 Description:  NIXIO POSIX library
 
 Package: luci-mod-admin-full
