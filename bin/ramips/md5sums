@@ -1,7 +1,7 @@
-414c58b14ca0f27a7b728497db141c6d *openwrt-ramips-mt7628-root.squashfs
-44d56d53858e5e818fc42c339d70b3c2 *openwrt-ramips-mt7628-uImage.bin
-02c366d53b2b08de2f904ace9191abe1 *openwrt-ramips-mt7628-vmlinux.bin
-e25de971dd0319633ea3f122d060d8bd *openwrt-ramips-mt7628-vmlinux.elf
-9b02f7e1df5ba0dce4c43133870e6f1e *openwrt-ramips-mt7628-wrtnode2p-squashfs-sysupgrade.bin
-76ea6047933c6eb49e028ef43626b5da *openwrt-ramips-mt7628-wrtnode2r-squashfs-sysupgrade.bin
-74de9084de6058e1d43f08bbd75a354d *sha256sums
+f0c8c09bfd15ab87a1d4577b983e7e68 *openwrt-ramips-mt7628-root.squashfs
+f9fee094d22bdb9a13650fb95e8c31c2 *openwrt-ramips-mt7628-uImage.bin
+45023ba85a0746e8949fa7ca47a97133 *openwrt-ramips-mt7628-vmlinux.bin
+0dce521a51b789025b73d147e088d845 *openwrt-ramips-mt7628-vmlinux.elf
+368c63814f9a617c2e97f8731a66eaca *openwrt-ramips-mt7628-wrtnode2p-squashfs-sysupgrade.bin
+9171559b6dd0ff7d68eea4e5df2fbbdb *openwrt-ramips-mt7628-wrtnode2r-squashfs-sysupgrade.bin
+e5d6d553cdc56b5cb133961ea916d8c1 *sha256sums

@@ -70,7 +70,7 @@ static int mt7628_pcm_codec_probe(struct platform_device *pdev)
 {
 	dev_err(&pdev->dev, ".............helloworld.................\n");
 	return snd_soc_register_codec(&pdev->dev,
-			&soc_codec_dev_mt7628_pcm, mt7628_pcm_codec_dai, ARRAY_SIZE(mt7628_pcm_codec_dai));
+			&soc_codec_dev_mt7628_pcm, mt7628_pcm_codec_dai,1); // ARRAY_SIZE(mt7628_pcm_codec_dai)
 }
 
 static int mt7628_pcm_codec_remove(struct platform_device *pdev)

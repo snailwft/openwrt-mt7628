@@ -234,11 +234,11 @@ Depends: kernel (=3.18.29-1-c002a7933cc12348d68c4c69474e3add)
 Source: package/kernel/gpio-button-hotplug
 Section: kernel
 Architecture: ramips_24kec
-Installed-Size: 5209
+Installed-Size: 5203
 Filename: kmod-gpio-button-hotplug_3.18.29-1_ramips_24kec.ipk
-Size: 6158
-MD5Sum: ce02ab4e28a58cb1ea98c694df087ecc
-SHA256sum: 80ce396f674722769ac14a5f5e9eb04d536ec802beb3fba2074521b391bb408a
+Size: 6170
+MD5Sum: 2c2ed2abff5f73a77dab221a54a13c2a
+SHA256sum: 90b144fedde540b8cdfafe7a7924f578eb6f476ec33ccb7567dae4d2bf6a7e3e
 Description:  This is a replacement for the following in-kernel drivers:
  1) gpio_keys (KEYBOARD_GPIO)
  2) gpio_keys_polled (KEYBOARD_GPIO_POLLED)
@@ -253,11 +253,11 @@ Depends: kernel (=3.18.29-1-c002a7933cc12348d68c4c69474e3add)
 Source: package/kernel/gpio_drv
 Section: kernel
 Architecture: ramips_24kec
-Installed-Size: 1905
+Installed-Size: 1906
 Filename: kmod-gpio_drv_3.18.29-1_ramips_24kec.ipk
-Size: 2831
-MD5Sum: 55eafa453f0bfeeed3373d3c2de58d14
-SHA256sum: d0049cb76ad2e4eb1ef863b81a6ae8998833dc6c5d34f0417ccc68bc637333b6
+Size: 2821
+MD5Sum: 0c8bbd948de714bfa91dea2194939c41
+SHA256sum: d8c60b1068a1022de82721e103bcfeab5113066269a00331415108667eefe3a7
 Description:  This is a replacement for the following in-kernel drivers:
  1) gpio_keys (KEYBOARD_GPIO)
  2) gpio_keys_polled (KEYBOARD_GPIO_POLLED)
@@ -537,9 +537,9 @@ Section: sxx
 Architecture: ramips_24kec
 Installed-Size: 3698
 Filename: kmod-mt7628-pcm_3.18.29+2013-12-04-1_ramips_24kec.ipk
-Size: 4450
-MD5Sum: 2e628cc68104e9939a9050ac6a9a9755
-SHA256sum: 6aac55d7a7c0f3454c15b50ec06fa59d51a7329f0b289e866d0e06f27cea847d
+Size: 4452
+MD5Sum: 00cad1f1bdf23a388185f4077dcdc12d
+SHA256sum: 6ba1d4d9c36fd631c16e8882807e3e3fe3f00c2ac7861b78bfb7ca02b1d87fc9
 Description:  I2S on mt7628
 
 Package: kmod-nf-conntrack6
@@ -659,9 +659,9 @@ Section: kernel
 Architecture: ramips_24kec
 Installed-Size: 4219
 Filename: kmod-pcm_drv_3.18.29-1_ramips_24kec.ipk
-Size: 5138
-MD5Sum: 97f0275a843fc705469610e049a0cacd
-SHA256sum: 09dde670ae5913922515a9b623d0b66edc9f82e9df5fd66a6825a45c793716d8
+Size: 5131
+MD5Sum: 76549504b046378ad20320491b1e4b4c
+SHA256sum: 42245a5f7fc0d5bd629fefb06856a8ac3b56029311eca4106e66d0c00559c863
 Description:  This is a replacement for the following in-kernel drivers:
  1) gpio_keys (KEYBOARD_GPIO)
  2) gpio_keys_polled (KEYBOARD_GPIO_POLLED)
@@ -796,11 +796,11 @@ Depends: kernel (=3.18.29-1-c002a7933cc12348d68c4c69474e3add)
 Source: package/kernel/spi_drv
 Section: kernel
 Architecture: ramips_24kec
-Installed-Size: 3438
+Installed-Size: 3437
 Filename: kmod-spi_drv_3.18.29-1_ramips_24kec.ipk
-Size: 4353
-MD5Sum: 2366ab1412b0e952a3970ca391c7ee78
-SHA256sum: da8d34fed540da79df09fca69d37c308c58010e252d21a9c2bfd562c8fbf1b2d
+Size: 4356
+MD5Sum: b0828aa8ec13493bace1323df0fdbe22
+SHA256sum: 4d68fdb5cad994c47ead53e20d11c55cb766a59f2a86f2d2670218def94355d7
 Description:  This is a replacement for the following in-kernel drivers:
  1) gpio_keys (KEYBOARD_GPIO)
  2) gpio_keys_polled (KEYBOARD_GPIO_POLLED)
@@ -950,11 +950,11 @@ Depends: kernel (=3.18.29-1-c002a7933cc12348d68c4c69474e3add)
 Source: package/kernel/watchdog_drv
 Section: kernel
 Architecture: ramips_24kec
-Installed-Size: 2108
+Installed-Size: 2106
 Filename: kmod-watchdog_drv_3.18.29-1_ramips_24kec.ipk
-Size: 3027
-MD5Sum: 33d7a084c0b7375506d156be996c85f1
-SHA256sum: e52a13f8c968deb6674870b9fe7d20afef0a3ac928c6060daff200deb8bb097f
+Size: 3033
+MD5Sum: 50a2d654b16eddc0eee1f44549597bc2
+SHA256sum: d05bb7b281d31a9df77f028ced391ed5fc5c2a6b9504887e44ae5001dbad9328
 Description:  This is a replacement for the following in-kernel drivers:
  1) gpio_keys (KEYBOARD_GPIO)
  2) gpio_keys_polled (KEYBOARD_GPIO_POLLED)
