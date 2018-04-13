@@ -1,8 +1,0 @@
-
-config misc
-	option dialing_key 	'#'
-	option dial_up_timeout 	'5'
-	option call_id_enable 	'1'
-	option call_id_mode 	'FSK'
-	option codec_current 	'20'
-

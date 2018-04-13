@@ -1,5 +1,0 @@
-
-config gainset
-	option rx_db '5'
-	option impedance '200_560_100'
-	
